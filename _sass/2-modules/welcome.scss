@@ -17,19 +17,19 @@
 
   &__img {
     border-radius: 50%;
-    width: 12rem;
+    width: 11rem;
     height: auto;
     object-fit: cover;
     margin-top: 2rem;
   }
 
   &__primary {
-    font-size: 3rem;
-    margin: 1.2rem;
+    font-size: 2.6rem;
+    margin: .6rem 1.2rem;
     letter-spacing: 1px;
   }
   &__secondary {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-weight: 400;
     text-transform: uppercase;
     color: $light-grey;
@@ -61,10 +61,37 @@
   }
 
   &__bubble {
-    width: 6rem;
+    width: 5rem;
     height: 3rem;
+    padding: 0 .4rem;
     background-color: $light-grey-2;
-    border-radius: 0 1.5rem 1.5rem 1.5rem;
+    border-radius: 0 1rem 1rem 1rem;
+
+    .dot {
+      height: .66rem;
+      width: .66rem;
+      float: left;
+      margin: 1rem 0 0 .7rem;
+      background-color: $blue;
+      display: block;
+      border-radius: 50%;
+      opacity: 0.4;
+
+      @for $i from 1 through 3 {
+        &:nth-of-type(#{$i}) {
+          animation: 1.5s blink infinite ($i * .3333s);
+        }
+      }
+    }
+  }
+}
+
+@keyframes blink {
+  0% {
+    transform: scale(1.4);
+  }
+  50% {
+    opacity: 1;
   }
 }
 
