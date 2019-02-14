@@ -1,0 +1,80 @@
+.phone-container {
+  @include absCenter;
+  background-color: #f9f9f9;
+  //box-shadow: 0 20px 47px rgba(180, 182, 196, 0.22);
+  //border-radius: 1rem;
+  height: 60rem;
+  width: 33rem;
+}
+.top {
+  width: 33rem;
+  height: auto;
+}
+
+.header {
+  font-family: $avenir;
+  text-align: center;
+
+  &__img {
+    border-radius: 50%;
+    width: 12rem;
+    height: auto;
+    object-fit: cover;
+    margin-top: 2rem;
+  }
+
+  &__primary {
+    font-size: 3rem;
+    margin: 1.2rem;
+    letter-spacing: 1px;
+  }
+  &__secondary {
+    font-size: 1.6rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: $light-grey;
+    margin-bottom: 2rem;
+  }
+  &__tertiary {
+    color: darken($light-grey, 15%);
+    font-weight: 700;
+  }
+}
+
+.date {
+  font-family: $avenir;
+  text-align: center;
+  color: $light-grey;
+  font-size: 1.2rem;
+  margin: 20% auto 2rem auto;
+}
+
+.typing {
+  display: flex;
+  align-content: center;
+  align-items: center;
+
+  &__henry {
+    width: 4rem;
+    height: auto;
+    margin: 0 1rem 0 2.4rem;
+  }
+
+  &__bubble {
+    width: 6rem;
+    height: 3rem;
+    background-color: $light-grey-2;
+    border-radius: 0 1.5rem 1.5rem 1.5rem;
+  }
+}
+
+.bottom-line {
+  position: absolute;
+  margin-right: auto;
+  margin-left: auto;
+  bottom: 1rem; right:0; left:0;
+  width: 15rem;
+  height: .4rem;
+  background: $light-grey;
+  border-radius: 2rem;
+}
