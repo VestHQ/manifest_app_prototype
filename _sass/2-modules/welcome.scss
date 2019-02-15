@@ -5,10 +5,12 @@
   //border-radius: 1rem;
   height: 60rem;
   width: 33rem;
+  overflow-y: scroll;
 }
 .top {
   width: 33rem;
   height: auto;
+  position: sticky;
 }
 
 .header {
@@ -54,6 +56,8 @@
   align-content: center;
   align-items: center;
 
+  animation: 1.2s moveDown forwards 1.6s;
+
   &__henry {
     width: 4rem;
     height: auto;
@@ -67,6 +71,8 @@
     background-color: $light-grey-2;
     border-radius: 0 1rem 1rem 1rem;
 
+    animation: .6s blink-on-off forwards 1.6s;
+
     .dot {
       height: .66rem;
       width: .66rem;
@@ -79,19 +85,44 @@
 
       @for $i from 1 through 3 {
         &:nth-of-type(#{$i}) {
-          animation: 1.5s blink infinite ($i * .3333s);
+          animation: 1.2s blink infinite ($i * .3333s);
         }
       }
     }
   }
 }
 
-@keyframes blink {
-  0% {
-    transform: scale(1.4);
+
+
+.msg {
+  background: $light-grey-2;
+  font-family: $avenir;
+  font-size: 1.1rem;
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+  width: 55%;
+  margin: 1rem auto 1rem 22%;
+
+  opacity: 0;
+  animation: 1.2s msg forwards .6s;
+
+  //@for $j from 1 through 3 {
+  //  &:nth-of-type(#{$j}) {
+  //    animation: 1.2s msg infinite ($j * .3333s);
+  //  }
+  //}
+
+  &--1 {
+
   }
-  50% {
-    opacity: 1;
+  &--2 {
+
+  }
+  &--3 {
+
+  }
+  &--4 {
+
   }
 }
 
