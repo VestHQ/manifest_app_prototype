@@ -33,3 +33,17 @@
     transform: translateY(14rem);
   }
 }
+
+@keyframes msgExpand {
+  0% {
+
+  }
+  100% {
+
+    opacity: 1;
+  }
+}
+// Post typing animation:
+// dots remove visibility
+// expand width
+// make text appear
