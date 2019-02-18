@@ -27,17 +27,26 @@ body {
   overflow-x: hidden;
 }
 
+.btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  bottom: 5%;
+  width: 100%;
+}
 .btn {
   background: $blue;
   color: #fff;
   font-family: $avenir;
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   font-weight: 600;
-  padding: 1.2rem 3rem;
   border: none;
   border-radius: 1rem;
   margin: 1rem auto;
-  display: flex;
+  padding: 1.4rem 3rem;
+  width: 20%;
 
   &:hover,
   &:focus {

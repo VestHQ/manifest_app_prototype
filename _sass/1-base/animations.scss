@@ -36,10 +36,10 @@
 
 @keyframes msgExpand {
   0% {
-
+    width: 0;
   }
   100% {
-
+    width: 55%;
     opacity: 1;
   }
 }
