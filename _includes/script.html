@@ -7,10 +7,6 @@
 </script>
 
 <script>
-
-    const henry = document.getElementById('henry');
-    const typing = document.getElementById('typing');
-
     /*TODO
     * have typing animation
     * expand to text message
@@ -20,87 +16,127 @@
     * expand msg
     * user img down
     * typing
+    *
+    * i want to transform typing into msgExpand
+    * one animates the dots
+    * the other animates the message bubble
+    *
+    * if (typing animation is complete)
+    * -> expand to message
+    *
+    * turn element into another element? or just toggle?
     * */
 
-    let chatDelay = 0;
-    let phone = $('.phone-container');
-    console.log(phone);
+    // const msg = document.getElementById('msg');
+    // const typing = document.getElementById('typing');
+    //
+    // // document.addEventListener('animationend', function() {
+    // //     console.log("animation stopped", event);
+    // // });
+    //
+    // let myEndFunction = function () {
+    //     console.log("animation stopped")
+    // };
+    //
+    // typing.addEventListener("webkitAnimationEnd", myEndFunction);
 
-    var chatMessages = [
+    // msg.onanimationend = function(event) {
+    //     console.log("message animation stopped", event);
+    // };
+
+    var chatMessages = [{
+        type: "text",
+        name: "ms1",
+        msg: "Hi! I'm Henry, and I'm here to assist your transfer.",
+        delay: 300,
+        align: "left",
+    },
         {
-            name: "ms1",
-            msg: "Hi! I'm Henry, your personal 401(k) Advisor. I'll help you quickly get into a 401(k) plan that works for you. Let's get you ready to set sail towards your retirement.",
-            delay: 2000,
-            align: "left",
-            // showTime: true,
-            // time: "19:58"
-        },
-        {
+            type: "text",
             name: "ms2",
-            msg: "First, I need your birthdate and last four digits of your SSN.",
-            delay: 4000,
+            msg: "Nice work on choosing to rollover your retirement. Moving your money to a plan appropriate for your employment situation is the best way to keep your retirement fund healthy, and growing!",
+            delay: 800,
             align: "left",
-            // showTime: true,
-            // time: "19:58"
         },
         {
+            type: "text",
             name: "ms3",
-            msg: "This is to tie your account to your employer's information and verify eligibility.",
-            delay: 6000,
+            msg: "Are you currently employed by UoC?",
+            delay: 1000,
             align: "left",
-            // showTime: true,
-            // time: "19:58"
         },
         {
-            name: "ms4",
-            msg: "Let's start with your date of birth",
-            delay: 7000,
-            align: "left",
-            // showTime: true,
-            // time: "19:58"
+            type: "input",
+            align: "right",
+            input: { type: "text" }
+        },
+        {
+            type: "input",
+            align: "right",
+            input: { type:"buttons", buttons: [ "Yes", "No"] },
         }
     ];
+    var currentMessage = 0;
+    var chatDelay = 0;
 
-    function onRowAdded() {
-        phone.animate({
-            scrollTop: phone.prop('scrollHeight')
-        });
+    function postMessage(alignment, text) {
+        $(".chat-message-list").append("<li class='message-'" + alignment + ">" + text + "</li>");
     }
 
-    $.each(chatMessages, function (index, obj) {
-        chatDelay = chatDelay + 2000;
-        chatDelay2 = chatDelay + obj.delay;
-        chatDelay3 = chatDelay2 + 10;
-        scrollDelay = chatDelay;
-        chatTimeString = " ";
-        msgname = "." + obj.name;
-        msginner = ".messageinner-" + obj.name;
-        spinner = ".sp-" + obj.name;
-        if (obj.showTime === true) {
-            chatTimeString = "<span class='message-time'>" + obj.time + "</span>";
+    function showInputBox() {
+        $(".chat-message-list").append("<input type='text'>");
+    }
+    function showInputButtons(button_names) {
+        $(".chat-message-list").append("<div class='btn-container'>" + "<button class='btn'>" + "Yes" + "</button>" + "<button class='btn'>" + "No" + "</button>" + "</div>");
+    }
+
+    function processCurrentMessage() {
+        if (currentMessage >= chatMessages.length) {
+            return;
         }
-        $(".chat-message-list").append("" +
-            "<li class='message-" + obj.align +
-            " " + obj.name + "' hidden>" +
-            "<div class='sp-" + obj.name + "'>" +
-            "<span class='spinme-" + obj.align + "'>" +
-            "<div class='spinner'>" +
-            "<div class='bounce1'></div>" +
-            "<div class='bounce2'></div>" +
-            "<div class='bounce3'></div>" +
-            "</div>" + "</span></div>" +
-            "<div class='messageinner-" + obj.name +
-            "' hidden><span class='message-text'>" +
-            obj.msg + "</span>" + "</div></li>");
 
-        $(msgname).delay(chatDelay).fadeIn();
-        $(spinner).delay(chatDelay2).hide(1);
-        $(msginner).delay(chatDelay3).fadeIn();
-        setTimeout(onRowAdded, chatDelay);
-        setTimeout(onRowAdded, chatDelay3);
-        chatDelay = chatDelay3;
-    });
+        const msg = chatMessages[currentMessage++]; //incriment msg so it doesnt repeat from beginning each time its called
+        switch (msg.type) {
+            case "text":
+                postMessage(msg.align, msg.msg);
+                // setup a timer which will call processCurrentMessage() after a delay message.delay
+                setTimeout(processCurrentMessage, msg.delay);
+                break;
+            case "input":
+                switch (msg.input.type) {
+                    case "text":
+                        showInputBox();
+                        break;
+                    case "buttons":
+                        showInputButtons(msg.input.buttons);
+                        break;
+                }
+                // do nothing, wait for the user to input/respond. when they do (on button click) call processCurrentMessage();
+                break;
+        }
+    }
 
+    processCurrentMessage();
 
+    // for each msg in the list {
+    //   switch (msg.type) {
+    //     case "text":
+    //       do what you do now
+    // .     break;
+    //     case "input":
+    // .     switch (msg.input.type) {
+    //         case "text":
+    //           show the text input, box wait for input
+    // .        break;
+    //         case "buttons":
+    //           show panel with buttons, box wait for input
+    //           use buttons names from the msg.input.buttons field
+    // .        break;
+    //       }
+    // .     break;
+    //   }
+    //
 
+    // 1. Add input field
+    // 2. Add support for mess
 </script>

@@ -72,7 +72,7 @@
     height: 3rem;
     padding: 0 .4rem;
     background-color: $light-grey-2;
-    border-radius: 0 1rem 1rem 1rem;
+    border-radius: $msg-border;
 
     //animation: .6s blink-on-off forwards 1.6s;
 
@@ -99,14 +99,16 @@
   background: $light-grey-2;
   font-family: $avenir;
   font-size: 1.6rem;
-  border-radius: 1rem;
+  border-radius: $msg-border;
   padding: 1rem 2rem;
   width: 55%;
   margin: 1rem auto 0 18%;
 
   color: $light-grey-2;
   opacity: 0;
-  animation: .5s msgExpand forwards .6s;
+  animation:
+          //.8s blink-dots forwards 2,
+          .5s msgExpand forwards .6s;
 }
 
 .bottom-line {

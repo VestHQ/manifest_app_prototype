@@ -19,6 +19,7 @@
 @keyframes msgExpand {
   0% {
     transform: translateX(-5rem) scale(.6);
+    opacity: 1;
   }
   50% {
     transform: scale(1);
