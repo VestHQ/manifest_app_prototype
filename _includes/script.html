@@ -7,84 +7,48 @@
 </script>
 
 <script>
-    /*TODO
-    * have typing animation
-    * expand to text message
-    * move user img to just below previous message
-    * repeat typing animation then msg expanding animation again
-    * typing
-    * expand msg
-    * user img down
-    * typing
-    *
-    * i want to transform typing into msgExpand
-    * one animates the dots
-    * the other animates the message bubble
-    *
-    * if (typing animation is complete)
-    * -> expand to message
-    *
-    * turn element into another element? or just toggle?
-    * */
-
-    // const msg = document.getElementById('msg');
-    // const typing = document.getElementById('typing');
-    //
-    // // document.addEventListener('animationend', function() {
-    // //     console.log("animation stopped", event);
-    // // });
-    //
-    // let myEndFunction = function () {
-    //     console.log("animation stopped")
-    // };
-    //
-    // typing.addEventListener("webkitAnimationEnd", myEndFunction);
-
-    // msg.onanimationend = function(event) {
-    //     console.log("message animation stopped", event);
-    // };
-
-    var chatMessages = [{
-        type: "text",
-        name: "ms1",
-        msg: "Hi! I'm Henry, and I'm here to assist your transfer.",
-        delay: 300,
-        align: "left",
-    },
+    var chatMessages = [
+        {
+            type: "text",
+            name: "ms1",
+            msg: "Hi! I'm Henry, and I'm here to assist your transfer.",
+            delay: 800,
+            align: "left",
+        },
         {
             type: "text",
             name: "ms2",
             msg: "Nice work on choosing to rollover your retirement. Moving your money to a plan appropriate for your employment situation is the best way to keep your retirement fund healthy, and growing!",
-            delay: 800,
+            delay: 1200,
             align: "left",
         },
         {
             type: "text",
             name: "ms3",
             msg: "Are you currently employed by UoC?",
-            delay: 1000,
+            delay: 1500,
             align: "left",
         },
         {
             type: "input",
             align: "right",
-            input: { type: "text" }
+            input: {type: "buttons", buttons: ["Yes", "No"]},
         },
         {
             type: "input",
             align: "right",
-            input: { type:"buttons", buttons: [ "Yes", "No"] },
+            input: {type: "text"}
         }
     ];
     var currentMessage = 0;
     var chatDelay = 0;
 
     function postMessage(alignment, text) {
-        $(".chat-message-list").append("<li class='message-'" + alignment + ">" + text + "</li>");
+        $(".user-w-msg").append("<p class='message-" + alignment + "'>" + text + "</p>");
     }
 
     function showInputBox() {
-        $(".chat-message-list").append("<input type='text'>");
+        $(".chat-message-list").append("<input type='text' class='input' placeholder='Type Something..'>");
     }
     function showInputButtons(button_names) {
         $(".chat-message-list").append("<div class='btn-container'>" + "<button class='btn'>" + "Yes" + "</button>" + "<button class='btn'>" + "No" + "</button>" + "</div>");
