@@ -74,7 +74,7 @@
     background-color: $light-grey-2;
     border-radius: 0 1rem 1rem 1rem;
 
-    animation: .6s blink-on-off forwards 1.6s;
+    //animation: .6s blink-on-off forwards 1.6s;
 
     .dot {
       height: .66rem;
@@ -88,7 +88,7 @@
 
       @for $i from 1 through 3 {
         &:nth-of-type(#{$i}) {
-          animation: 1.2s blink infinite ($i * .3333s);
+          animation: .8s blink-dots forwards 2 ($i * .2s);
         }
       }
     }
@@ -98,20 +98,15 @@
 .msg {
   background: $light-grey-2;
   font-family: $avenir;
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   border-radius: 1rem;
   padding: 1rem 2rem;
   width: 55%;
-  margin: 1rem auto 1rem 22%;
+  margin: 1rem auto 0 18%;
 
+  color: $light-grey-2;
   opacity: 0;
-  animation: 1.2s msg forwards .6s;
-
-  //@for $j from 1 through 3 {
-  //  &:nth-of-type(#{$j}) {
-  //    animation: 1.2s msg infinite ($j * .3333s);
-  //  }
-  //}
+  animation: .5s msgExpand forwards .6s;
 }
 
 .bottom-line {

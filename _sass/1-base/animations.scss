@@ -1,4 +1,4 @@
-@keyframes blink {
+@keyframes blink-dots {
   0% {
     transform: scale(1.4);
   }
@@ -16,12 +16,17 @@
   }
 }
 
-@keyframes msg {
+@keyframes msgExpand {
   0% {
-    transform: translateY(-5rem) scale(.9);
+    transform: translateX(-5rem) scale(.6);
+  }
+  50% {
+    transform: scale(1);
+    color: $light-grey-2;
   }
   100% {
     opacity: 1;
+    color: #000;
   }
 }
 
@@ -33,17 +38,3 @@
     transform: translateY(14rem);
   }
 }
-
-@keyframes msgExpand {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 55%;
-    opacity: 1;
-  }
-}
-// Post typing animation:
-// dots remove visibility
-// expand width
-// make text appear
