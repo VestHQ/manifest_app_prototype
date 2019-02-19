@@ -10,21 +10,18 @@
     var chatMessages = [
         {
             type: "text",
-            name: "ms1",
             msg: "Hi! I'm Henry, and I'm here to assist your transfer.",
             delay: 800,
             align: "left",
         },
         {
             type: "text",
-            name: "ms2",
             msg: "Nice work on choosing to rollover your retirement. Moving your money to a plan appropriate for your employment situation is the best way to keep your retirement fund healthy, and growing!",
             delay: 1200,
             align: "left",
         },
         {
             type: "text",
-            name: "ms3",
             msg: "Are you currently employed by UoC?",
             delay: 1500,
             align: "left",
@@ -33,6 +30,29 @@
             type: "input",
             align: "right",
             input: {type: "buttons", buttons: ["Yes", "No"]},
+            // delay: 1800,
+            msgYes: "Sorry, the service can only be used by former employees to move their 401(k).",
+            msgNo: "No"
+        },
+        {
+            type: "text",
+            msg: "Do you have a 401(k) balance at UoC?",
+            delay: 1800,
+            align: "left",
+        },
+        {
+            type: "input",
+            align: "right",
+            input: {type: "buttons", buttons: ["Yes", "No"]},
+            // delay: 1800,
+            msgYes: "Lets create an account so you can sign in and check your status anytime.",
+            msgNo: "No"
+        },
+        {
+            type: "text",
+            msg: "What is your email?",
+            delay: 1800,
+            align: "left",
         },
         {
             type: "input",
@@ -51,7 +71,21 @@
         $(".chat-message-list").append("<input type='text' class='input' placeholder='Type Something..'>");
     }
     function showInputButtons(button_names) {
-        $(".chat-message-list").append("<div class='btn-container'>" + "<button class='btn'>" + "Yes" + "</button>" + "<button class='btn'>" + "No" + "</button>" + "</div>");
+        $(".chat-message-list").append("<div class='btn-container'>" + "<button class='btn' id='yes'>" + "Yes" + "</button>" + "<button class='btn' id='no'>" + "No" + "</button>" + "</div>");
+    }
+    function displayBtnResponse(msgYes, msgNo) {
+        $(':button').click(function () {
+            if (this.id === 'yes') {
+                postMessage("right", "Yes");
+                setTimeout(postMessage("left", msgYes), 600);
+                $(':button').remove();
+            }
+            else {
+                postMessage("right", msgNo);
+                $(':button').remove();
+                setTimeout(processCurrentMessage, 600)
+            }
+        });
     }
 
     function processCurrentMessage() {
@@ -73,6 +107,7 @@
                         break;
                     case "buttons":
                         showInputButtons(msg.input.buttons);
+                        displayBtnResponse(msg.msgYes, msg.msgNo);
                         break;
                 }
                 // do nothing, wait for the user to input/respond. when they do (on button click) call processCurrentMessage();
@@ -82,25 +117,5 @@
 
     processCurrentMessage();
 
-    // for each msg in the list {
-    //   switch (msg.type) {
-    //     case "text":
-    //       do what you do now
-    // .     break;
-    //     case "input":
-    // .     switch (msg.input.type) {
-    //         case "text":
-    //           show the text input, box wait for input
-    // .        break;
-    //         case "buttons":
-    //           show panel with buttons, box wait for input
-    //           use buttons names from the msg.input.buttons field
-    // .        break;
-    //       }
-    // .     break;
-    //   }
-    //
 
-    // 1. Add input field
-    // 2. Add support for mess
 </script>

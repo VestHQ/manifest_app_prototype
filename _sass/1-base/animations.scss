@@ -16,7 +16,7 @@
   }
 }
 
-@keyframes msgExpand {
+@keyframes msgExpandLeft {
   0% {
     transform: translateX(-5rem) scale(.6);
     opacity: 1;
@@ -28,6 +28,20 @@
   100% {
     opacity: 1;
     color: #000;
+  }
+}
+@keyframes msgExpandRight {
+  0% {
+    transform: translateX(5rem) scale(.6);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1);
+    color: $light-grey-2;
+  }
+  100% {
+    opacity: 1;
+    //color: #000;
   }
 }
 

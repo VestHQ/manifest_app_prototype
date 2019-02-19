@@ -11,6 +11,9 @@
     height: 100vh;
   }
 }
+.chat-container {
+  //height: 100%;
+}
 .top {
   width: 100%;
   height: auto;
@@ -59,17 +62,17 @@
   font-size: 1.3rem;
   border-radius: $msg-border;
   padding: 1rem 1.6rem;
-  width: 60%;
-  margin: 1rem auto 0 8rem;
+  max-width: 60%;
+  margin: 1rem auto 1.5rem 8rem;
 
   color: $light-grey-2;
   opacity: 0;
   animation:
           //.8s blink-dots forwards 2,
-          .5s msgExpand forwards .6s;
+          .5s msgExpandLeft forwards .6s;
 
   //&::before {
-  //  content: url("/assets/img/henry2.png");
+  //  content: url("/assets/img/henry.png");
   //  position: absolute;
   //  left: 2.4rem;
   //
@@ -77,6 +80,15 @@
   //  height: auto;
   //  margin: 0 1rem 0 0;
   //}
+}
+
+.message-right {
+  @extend .message-left;
+  background: $blue;
+  color: #fff;
+  border-radius: $msg-border-right;
+  animation:
+          .5s msgExpandRight forwards .6s;
 }
 
 .input {
@@ -89,13 +101,13 @@
   border-bottom: 2px solid $blue;
   outline: none;
   width: 80%;
-  position: absolute;
-  bottom: 4rem;
+  position: relative;
+  bottom: 0;
 
   padding: .5rem 1rem;
-  //margin: 1.5rem auto;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 1.5rem auto;
+  //margin-left: auto;
+  //margin-right: auto;
   left: 9%;
 
   &:placeholder-shown {

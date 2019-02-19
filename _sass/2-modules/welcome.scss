@@ -39,6 +39,7 @@
     font-size: 1.6rem;
     font-weight: 400;
     margin-bottom: 2rem;
+    color: #4d4d4d;
   }
   &__tertiary {
     color: darken($light-grey, 15%);
@@ -110,7 +111,10 @@
 //          //.8s blink-dots forwards 2,
 //          .5s msgExpand forwards .6s;
 //}
-
+.bottom {
+  background: #f9f9f9;
+  padding: 2rem 0;
+}
 .bottom-line {
   position: absolute;
   margin-right: auto;
