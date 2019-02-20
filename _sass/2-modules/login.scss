@@ -1,0 +1,74 @@
+.welcome {
+  font-family: $avenir;
+  display: flex;
+  flex-direction: column;
+  //justify-content: center;
+}
+
+.placeholder {
+  width: 20rem;
+  height: 12rem;
+  margin: 2rem auto;
+  background: $light-grey-2;
+}
+.heading {
+  font-family: $avenir;
+  font-size: 3.5rem;
+  line-height: 1.4;
+  width: 55%;
+  margin: 0 auto;
+
+  &--blue {
+    color: $blue;
+  }
+}
+.text {
+  font-family: $avenir;
+  font-size: 1.5rem;
+  padding: 3rem;
+  line-height: 1.3;
+
+  &--grey {
+    color: $light-grey;
+    font-weight: 600;
+    font-size: 1.4rem;
+    text-align: center;
+  }
+  &--blue {
+    color: $blue;
+  }
+}
+.dot-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.dot {
+  text-decoration: none;
+  cursor: pointer;
+  color: $blue;
+  font-size: 7.5rem;
+  line-height: 0;
+
+  &--light {
+    color: lighten($blue, 20%);
+  }
+}
+
+.list {
+  display: list-item;
+  position: relative;
+  list-style-image: url("../../assets/img/check.png") !important;
+
+  .item {
+    font-size: 1.6rem;
+    padding: 0 10%;
+    margin-bottom: 2rem;
+
+    &::before {
+      content: url("../../assets/img/check.png");
+      vertical-align: -60%;
+    }
+  }
+}
