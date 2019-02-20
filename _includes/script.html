@@ -31,7 +31,7 @@
         },
         {
             type: "input",
-            align: "right",
+            align: "left",
             input: {type: "buttons", buttons: ["Yes", "No"]},
             // delay: 1800,
             msgYes: "Yes",
@@ -46,7 +46,7 @@
         },
         {
             type: "input",
-            align: "right",
+            align: "left",
             input: {type: "buttons", buttons: ["Yes", "No"]},
             msgYes: "Yes",
             msgNo: "No"
@@ -55,7 +55,7 @@
             type: "text",
             align: "left",
             msg: "Lets create an account so you can sign in and check your status anytime.",
-            msgYes: "Lets create an account so you can sign in and check your status anytime.",
+            msgYes: this.msg,
             delay: 1800,
         },
         {
@@ -66,7 +66,7 @@
         },
         {
             type: "input",
-            align: "right",
+            align: "left",
             input: {type: "text"}
         }
     ];
@@ -77,30 +77,39 @@
     const henry = $('.henry');
     const henryMsg = $('.message-left');
     const henryMsg2 = document.getElementsByClassName('message-left');
+    const response = document.querySelector('message-right');
 
-    const ul = document.getElementsByClassName('chat-message-list');
+    const ul = document.querySelector('chat-message-list');
+    const li = document.querySelector('li');
 
-    console.log(chatBox, chatBox[0].offsetHeight)
+    // console.log(chatBox, chatBox[0].offsetHeight)
+    //
+    // var $ = function (selector) {
+    //     return document.querySelector(selector);
+    // };
+    // var links = $('#links').getElementsByTagName('li');
+    //
+    // // For each <li> inside #links
+    // for (var i = 0; i < links.length; i++) {
+    //     var link = links[i];
+    //     link.onclick = editResponse;
+    // }
+    //
+    //
+    // function editResponse() {
 
+    // }
+
+    // for (let i=0; i <= li.length; i++) {
+    //     let liMsg = li[i];
+    //     liMsg.onclick = editResponse;
+    // }
 
     function updateScroll() {
-        // for(let i=0; i <= ul.length; i++){
-        //     console.log(henryMsg[i]);
-        // }
-        // let currentPosition = parseInt(henryMsg.style.top);
-        // let amountToMove = 30;
-        // henryMsg.style.top = currentPosition + amountToMove + "pt";
-
         chatBox[0].offsetHeight += 200;
         chatBox[0].scrollTop = chatBox[0].scrollHeight - chatBox[0].clientHeight;
     }
     setInterval(updateScroll, 100);
-    // setInterval(function (){
-    //     let bottom = chatBox[0].scrollHeight - chatBox[0].clientHeight <= chatBox[0].scrollTop + 1;
-    //     if(bottom) {
-    //         chatBox[0].scrollTop = chatBox[0].scrollHeight - chatBox[0].clientHeight;
-    //     }
-    // },100);
 
 
     function postMessage(alignment, text) {
