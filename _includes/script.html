@@ -9,18 +9,21 @@
 <script>
     var chatMessages = [
         {
+            name: "ms1",
             type: "text",
             align: "left",
             msg: "Hi! I'm Henry, and I'm here to assist your transfer.",
             delay: 800,
         },
         {
+            name: "ms2",
             type: "text",
             align: "left",
             msg: "Nice work on choosing to rollover your retirement. Moving your money to a plan appropriate for your employment situation is the best way to keep your retirement fund healthy, and growing!",
             delay: 1200,
         },
         {
+            name: "ms3",
             type: "text",
             align: "left",
             msg: "Are you currently employed by UoC?",
@@ -69,11 +72,40 @@
     ];
     var currentMessage = 0;
     var chatDelay = 0;
+    const chatBox = document.getElementsByClassName('chat');
+    const chat = $('.chat');
+    const henry = $('.henry');
+    const henryMsg = $('.message-left');
+    const henryMsg2 = document.getElementsByClassName('message-left');
 
-    // Todo update scroll fix yes answer
+    const ul = document.getElementsByClassName('chat-message-list');
+
+    console.log(chatBox, chatBox[0].offsetHeight)
+
+
+    function updateScroll() {
+        // for(let i=0; i <= ul.length; i++){
+        //     console.log(henryMsg[i]);
+        // }
+        // let currentPosition = parseInt(henryMsg.style.top);
+        // let amountToMove = 30;
+        // henryMsg.style.top = currentPosition + amountToMove + "pt";
+
+        chatBox[0].offsetHeight += 200;
+        chatBox[0].scrollTop = chatBox[0].scrollHeight - chatBox[0].clientHeight;
+    }
+    setInterval(updateScroll, 100);
+    // setInterval(function (){
+    //     let bottom = chatBox[0].scrollHeight - chatBox[0].clientHeight <= chatBox[0].scrollTop + 1;
+    //     if(bottom) {
+    //         chatBox[0].scrollTop = chatBox[0].scrollHeight - chatBox[0].clientHeight;
+    //     }
+    // },100);
+
 
     function postMessage(alignment, text) {
-        $(".user-w-msg").append("<p class='message-" + alignment + "'>" + text + "</p>");
+        $(".chat-message-list").append("<li class='message-" + alignment + "'>" + text + "</li>");
+        updateScroll();
     }
 
     function showInputBox() {
@@ -109,6 +141,7 @@
         }
 
         const msg = chatMessages[currentMessage++]; //incriment msg so it doesnt repeat from beginning each time its called
+
         switch (msg.type) {
             case "text":
                 postMessage(msg.align, msg.msg);
