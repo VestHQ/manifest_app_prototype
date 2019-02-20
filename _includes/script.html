@@ -10,49 +10,56 @@
     var chatMessages = [
         {
             type: "text",
+            align: "left",
             msg: "Hi! I'm Henry, and I'm here to assist your transfer.",
             delay: 800,
-            align: "left",
         },
         {
             type: "text",
+            align: "left",
             msg: "Nice work on choosing to rollover your retirement. Moving your money to a plan appropriate for your employment situation is the best way to keep your retirement fund healthy, and growing!",
             delay: 1200,
-            align: "left",
         },
         {
             type: "text",
+            align: "left",
             msg: "Are you currently employed by UoC?",
             delay: 1500,
-            align: "left",
         },
         {
             type: "input",
             align: "right",
             input: {type: "buttons", buttons: ["Yes", "No"]},
             // delay: 1800,
-            msgYes: "Sorry, the service can only be used by former employees to move their 401(k).",
-            msgNo: "No"
+            msgYes: "Yes",
+            msgNo: "No",
+            id: "exit"
         },
         {
             type: "text",
+            align: "left",
             msg: "Do you have a 401(k) balance at UoC?",
             delay: 1800,
-            align: "left",
         },
         {
             type: "input",
             align: "right",
             input: {type: "buttons", buttons: ["Yes", "No"]},
-            // delay: 1800,
-            msgYes: "Lets create an account so you can sign in and check your status anytime.",
+            msgYes: "Yes",
             msgNo: "No"
         },
         {
             type: "text",
+            align: "left",
+            msg: "Lets create an account so you can sign in and check your status anytime.",
+            msgYes: "Lets create an account so you can sign in and check your status anytime.",
+            delay: 1800,
+        },
+        {
+            type: "text",
+            align: "left",
             msg: "What is your email?",
             delay: 1800,
-            align: "left",
         },
         {
             type: "input",
@@ -62,6 +69,8 @@
     ];
     var currentMessage = 0;
     var chatDelay = 0;
+
+    // Todo update scroll fix yes answer
 
     function postMessage(alignment, text) {
         $(".user-w-msg").append("<p class='message-" + alignment + "'>" + text + "</p>");
@@ -73,14 +82,20 @@
     function showInputButtons(button_names) {
         $(".chat-message-list").append("<div class='btn-container'>" + "<button class='btn' id='yes'>" + "Yes" + "</button>" + "<button class='btn' id='no'>" + "No" + "</button>" + "</div>");
     }
-    function displayBtnResponse(msgYes, msgNo) {
+    function displayBtnResponse(msgYes, msgNo, id) {
         $(':button').click(function () {
+            if (id === 'exit' && this.id === 'yes') {
+                postMessage("right", msgYes);
+                postMessage("left", "Sorry, the service can only be used by former employees to move their 401(k).");
+                $(':button').remove();
+                return;
+            }
             if (this.id === 'yes') {
-                postMessage("right", "Yes");
-                setTimeout(postMessage("left", msgYes), 600);
+                postMessage("right", msgYes);
+                setTimeout(processCurrentMessage, 600);
                 $(':button').remove();
             }
-            else {
+            else if (this.id === 'no') {
                 postMessage("right", msgNo);
                 $(':button').remove();
                 setTimeout(processCurrentMessage, 600)
@@ -107,7 +122,7 @@
                         break;
                     case "buttons":
                         showInputButtons(msg.input.buttons);
-                        displayBtnResponse(msg.msgYes, msg.msgNo);
+                        displayBtnResponse(msg.msgYes, msg.msgNo, msg.id);
                         break;
                 }
                 // do nothing, wait for the user to input/respond. when they do (on button click) call processCurrentMessage();
