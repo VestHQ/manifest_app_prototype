@@ -1,0 +1,48 @@
+.heading {
+  color: $dark-grey;
+  font-size: 3.5rem;
+  line-height: 1.4;
+  width: 55%;
+  margin: 0 auto;
+
+  &--blue {
+    color: $blue;
+  }
+  &--secondary {
+    width: 80%;
+    color: $dark-grey;
+    font-size: 3rem;
+    text-align: center;
+    margin: 7rem auto;
+  }
+  &--tertiary {
+    width: 80%;
+    color: $dark-grey;
+    font-size: 2.6rem;
+    text-align: center;
+    margin: 3rem auto;
+  }
+}
+.text {
+  font-family: $avenir;
+  font-size: 1.5rem;
+  padding: 3rem;
+  line-height: 1.3;
+
+  &--grey {
+    color: $light-grey;
+    font-weight: 600;
+    font-size: 1.4rem;
+    text-align: center;
+  }
+  &--blue {
+    color: $blue;
+    text-decoration: none;
+  }
+  &--blue-large {
+    color: $blue;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.5rem;
+  }
+}
