@@ -38,3 +38,37 @@
     }
   }
 }
+
+.tiaa-form {
+  font-family: $avenir;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+  color: #fff;
+
+  &__label {
+    align-self: flex-start;
+    position: relative;
+    z-index:1;
+    top: 2.5rem;
+    left: 3.4rem;
+
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding-bottom: 1rem;
+  }
+
+  &__input {
+    color: #fff;
+    background: $tiaa-blue;
+    width: 80%;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid $light-grey;
+    padding: 2.5rem 0 1rem 0;
+    font-weight: 800;
+  }
+}

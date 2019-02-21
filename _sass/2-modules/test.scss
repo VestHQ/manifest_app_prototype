@@ -1,8 +1,8 @@
 .chat {
   @include absCenter;
   background-color: #f9f9f9;
-  height: 66rem;
-  width: 37rem;
+  height: $phone-height;
+  width: $phone-width;
   overflow-y: auto;
   overflow-x: hidden;
 

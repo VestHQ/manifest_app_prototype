@@ -1,0 +1,14 @@
+.tiaa-logo {
+  width: 18rem;
+  height: auto;
+  margin: 2rem auto;
+}
+
+.tiaa-success {
+  background-image: url("../../assets/img/tiaa_succsess.png") !important;
+  background-repeat: no-repeat;
+  background-size: cover;
+  //object-fit: cover;
+  height: 73rem;
+  width: $phone-width;
+}
