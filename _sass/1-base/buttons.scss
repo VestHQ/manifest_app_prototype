@@ -34,8 +34,8 @@
 .btn-large {
   @extend .btn;
   margin: 2rem auto;
-  font-size: 1.5rem;
-  padding: 1.3rem 1rem;
+  font-size: 1.8rem;
+  padding: 1.3rem .8rem;
   display: inline;
   width: 40%;
 
@@ -48,4 +48,9 @@
   @extend .btn-large;
   background: $light-grey-2;
   color: #000;
+}
+.btn-white {
+  @extend .btn-large;
+  background: #fff;
+  color: $tiaa-blue;
 }
