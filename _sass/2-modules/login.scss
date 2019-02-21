@@ -21,6 +21,13 @@
   &--blue {
     color: $blue;
   }
+  &--secondary {
+    width: 80%;
+    color: $dark-grey;
+    font-size: 3rem;
+    text-align: center;
+    margin: 7rem auto;
+  }
 }
 .text {
   font-family: $avenir;
@@ -36,6 +43,7 @@
   }
   &--blue {
     color: $blue;
+    text-decoration: none;
   }
 }
 .dot-container {
@@ -59,7 +67,7 @@
 .list {
   display: list-item;
   position: relative;
-  list-style-image: url("../../assets/img/check.png") !important;
+  //list-style-image: url("../../assets/img/check.png") !important;
 
   .item {
     font-size: 1.6rem;

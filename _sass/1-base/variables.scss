@@ -1,8 +1,12 @@
 $avenir: "AvenirLTStd-Book",sans-serif;
 
 $blue: #4E78F6;
+$blue-light: lighten($blue, 20%);
+$background-grey: #f9f9f9;
 $light-grey: #BFC6CF;
 $light-grey-2: #F0F0F0;
+
+$dark-grey: #6F6F6F;
 
 $box-shadow: 0 20px 47px rgba(180, 182, 196, 0.22);
 

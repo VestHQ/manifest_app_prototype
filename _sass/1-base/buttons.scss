@@ -6,6 +6,10 @@
   position: relative;
   bottom: 5%;
   width: 100%;
+
+  &--center {
+    @include absCenter;
+  }
 }
 .btn {
   background: $blue;
@@ -39,4 +43,9 @@
   bottom: 3%;
   right: 50%; left: 50%;
   transform: translate(-50%, -50%);
+}
+.btn-grey {
+  @extend .btn-large;
+  background: $light-grey-2;
+  color: #000;
 }
