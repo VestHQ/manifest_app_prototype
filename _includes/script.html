@@ -35,8 +35,7 @@
             input: {type: "buttons", buttons: ["Yes", "No"]},
             // delay: 1800,
             msgYes: "Yes",
-            msgNo: "No",
-            id: "exit"
+            msgNo: "No"
         },
         {
             type: "text",
@@ -96,7 +95,7 @@
         chatBox[0].offsetHeight += 200;
         chatBox[0].scrollTop = chatBox[0].scrollHeight - chatBox[0].clientHeight;
     }
-    setInterval(updateScroll, 100);
+    setInterval(updateScroll, 300);
 
 
     function postMessage(alignment, text) {
@@ -112,22 +111,15 @@
     }
     function displayBtnResponse(msgYes, msgNo, id) {
         $(':button').click(function () {
-            if (id === 'exit' && this.id === 'yes') {
-                postMessage("right", msgYes);
-                postMessage("left", "Sorry, the service can only be used by former employees to move their 401(k).");
-                $(':button').remove();
-                return;
-            }
             if (this.id === 'yes') {
                 postMessage("right", msgYes);
                 setTimeout(processCurrentMessage, 600);
-                $(':button').remove();
             }
             else if (this.id === 'no') {
                 postMessage("right", msgNo);
-                $(':button').remove();
                 setTimeout(processCurrentMessage, 600)
             }
+            $(':button').remove();
         });
     }
 
@@ -151,7 +143,7 @@
                         break;
                     case "buttons":
                         showInputButtons(msg.input.buttons);
-                        displayBtnResponse(msg.msgYes, msg.msgNo, msg.id);
+                        displayBtnResponse(msg.msgYes, msg.msgNo);
                         break;
                 }
                 // do nothing, wait for the user to input/respond. when they do (on button click) call processCurrentMessage();

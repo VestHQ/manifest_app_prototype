@@ -48,12 +48,6 @@
   position: relative;
 }
 
-
-//.typing__henry {
-//  position: relative;
-//  left: .5rem;
-//}
-
 .chat ul {
   margin: 0;
   padding: 0;
@@ -73,16 +67,14 @@
   color: $light-grey-2;
   opacity: 0;
   animation:
-          //.8s blink-dots forwards 2,
-          .5s msgExpandLeft forwards .6s;
-
-
+          1s sk-bouncedelay forwards 2,
+          .5s msgExpandLeft forwards 1s;
 
   //&::before {
   //  content: url("/assets/img/henry-icon.png");
   //  position: absolute;
   //  left: -6.4rem;
-  //  //animation: .3s movedown forwards;
+  //  animation: .3s movedown forwards;
   //}
 }
 
@@ -130,76 +122,11 @@
   }
 }
 
-//.message-left .message-time {
-//  display: block;
-//  font-size: 1.8rem;
-//  text-align: left;
-//  padding-left: 30px;
-//  padding-top: 4px;
-//  color: #000;
-//  background: $light-grey-2;
-//}
-//
-//.message-right .message-time {
-//  display: block;
-//  font-size: 1.8rem;
-//  text-align: right;
-//  padding-right: 20px;
-//  padding-top: 4px;
-//  color: #ccc;
-//}
-//
-//.message-left {
-//  text-align: left;
-//  margin-bottom: 16px;
-//}
-//
-//.message-left .message-text {
-//  max-width: 80%;
-//  display: inline-block;
-//  background: $light-grey-2;
-//  padding: 15px;
-//  font-size: 14px;
-//  border-radius: 30px;
-//  font-weight: 100;
-//  line-height: 1.5em;
-//}
-//
-//.message-right {
-//  text-align: right;
-//  margin-bottom: 16px;
-//}
-//
-//.message-right .message-text {
-//  line-height: 1.5em;
-//  display: inline-block;
-//  background: #5ca6fa;
-//  padding: 15px;
-//  font-size: 14px;
-//  color: #fff;
-//  border-radius: 30px;
-//  text-align: left;
-//}
-
-
-
-
-
-.spinme-right {
-  display: inline-block;
-  padding: 15px 20px;
-  font-size: 14px;
-  border-radius: 30px;
-  line-height: 1.25em;
-  font-weight: 100;
-  opacity: 0.2;
-}
-
 .spinme-left {
   display: inline-block;
   padding: 15px 20px;
   font-size: 14px;
-  color: #ccc;
+  color: $blue;
   border-radius: 30px;
   line-height: 1.25em;
   font-weight: 100;
@@ -208,8 +135,13 @@
 
 .spinner {
   margin: 0;
-  width: 30px;
+  width: 5rem;
   text-align: center;
+  @extend .message-left;
+  position: relative;
+  left: 8rem;
+  top: -7rem;
+  //z-index: -1;
 }
 
 .spinner > div {
@@ -217,9 +149,8 @@
   height: 10px;
   border-radius: 100%;
   display: inline-block;
-  -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
-  animation: sk-bouncedelay 1.4s infinite ease-in-out both;
-  background: rgba(0,0,0,1);
+  animation: sk-bouncedelay 1.4s forwards 2 1s;
+  background: $blue;
 }
 
 .spinner .bounce1 {
