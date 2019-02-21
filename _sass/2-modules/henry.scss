@@ -67,8 +67,8 @@
   color: $light-grey-2;
   opacity: 0;
   animation:
-          1s sk-bouncedelay forwards 2,
-          .5s msgExpandLeft forwards 1s;
+          //.8s sk-bouncedelay forwards 2 0s,
+          .5s msgExpandLeft forwards;
 
   //&::before {
   //  content: url("/assets/img/henry-icon.png");
@@ -122,67 +122,50 @@
   }
 }
 
-.spinme-left {
-  display: inline-block;
-  padding: 15px 20px;
-  font-size: 14px;
-  color: $blue;
-  border-radius: 30px;
-  line-height: 1.25em;
-  font-weight: 100;
-  opacity: 0.2;
-}
+//.spinme-left {
+//  display: inline-block;
+//  padding: 15px 20px;
+//  font-size: 14px;
+//  color: $blue;
+//  border-radius: 30px;
+//  line-height: 1.25em;
+//  font-weight: 100;
+//  opacity: 0.2;
+//}
+//
+//.spinner {
+//  margin: 0;
+//  width: 5rem;
+//  text-align: center;
+//  @extend .message-left;
+//  position: relative;
+//  left: 8rem;
+//  top: -7rem;
+//  //z-index: -1;
+//}
+//
+//.spinner > div {
+//  width: 10px;
+//  height: 10px;
+//  border-radius: 100%;
+//  display: inline-block;
+//  //animation: sk-bouncedelay 1.4s forwards 2 1s;
+//  background: $blue;
+//
+//  @for $i from 1 through 3 {
+//    &:nth-of-type(#{$i}) {
+//      animation: 1.5s blink forwards ($i * .3333s) 4;
+//    }
+//  }
+//}
+//
+//.spinner .bounce1 {
+//  -webkit-animation-delay: -0.32s;
+//  animation-delay: -0.32s;
+//}
+//
+//.spinner .bounce2 {
+//  -webkit-animation-delay: -0.16s;
+//  animation-delay: -0.16s;
+//}
 
-.spinner {
-  margin: 0;
-  width: 5rem;
-  text-align: center;
-  @extend .message-left;
-  position: relative;
-  left: 8rem;
-  top: -7rem;
-  //z-index: -1;
-}
-
-.spinner > div {
-  width: 10px;
-  height: 10px;
-  border-radius: 100%;
-  display: inline-block;
-  animation: sk-bouncedelay 1.4s forwards 2 1s;
-  background: $blue;
-}
-
-.spinner .bounce1 {
-  -webkit-animation-delay: -0.32s;
-  animation-delay: -0.32s;
-}
-
-.spinner .bounce2 {
-  -webkit-animation-delay: -0.16s;
-  animation-delay: -0.16s;
-}
-
-@-webkit-keyframes sk-bouncedelay {
-  0%,
-  80%,
-  100% {
-    -webkit-transform: scale(0)
-  }
-  40% {
-    -webkit-transform: scale(1.0)
-  }
-}
-
-@keyframes sk-bouncedelay {
-  0%,
-  80%,
-  100% {
-    -webkit-transform: scale(0);
-    transform: scale(0);
-  }
-  40% {
-    -webkit-transform: scale(1.0);
-    transform: scale(1.0);
-  }
-}
