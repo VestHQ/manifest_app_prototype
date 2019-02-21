@@ -54,3 +54,13 @@
   background: #fff;
   color: $tiaa-blue;
 }
+
+.button-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  & > * {
+    width: 33.333%;
+  }
+}
