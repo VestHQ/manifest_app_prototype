@@ -26,6 +26,11 @@
     margin: 1rem 2rem;
     border-radius: 1rem;
 
+    //&:not(:first-child) {
+    //  background-image: linear-gradient(to bottom, rgba($light-grey, 0.8), rgba($light-grey, 0.8));
+    //  z-index: 999;
+    //}
+
     &--sm {
       height: 3rem;
       padding: 2rem;

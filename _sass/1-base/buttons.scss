@@ -45,6 +45,11 @@
   background: $light-grey-2;
   color: #000;
 }
+.btn-dark-grey {
+  @extend .btn;
+  background: $dark-grey;
+  color: #fff;
+}
 .btn-white {
   @extend .btn-large;
   background: #fff;
