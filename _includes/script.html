@@ -12,21 +12,21 @@
             name: "ms1",
             type: "text",
             align: "left",
-            msg: "Hi! I'm Henry, and I'm here to assist your transfer.",
+            msg: "Hi! I'm Henry, and I'm your transfer specialist.",
             delay: 800,
         },
         {
             name: "ms2",
             type: "text",
             align: "left",
-            msg: "Nice work on choosing to rollover your retirement. Moving your money to a plan appropriate for your employment situation is the best way to keep your retirement fund healthy, and growing!",
+            msg: "Nice work on choosing to consolidate your retirement accounts. Choosing the right account can be hard, but I'm here to help!",
             delay: 1200,
         },
         {
             name: "ms3",
             type: "text",
             align: "left",
-            msg: "Are you currently employed by UoC?",
+            msg: "Do you have at least 6 months of personal savings?",
             delay: 1500,
         },
         {
@@ -41,15 +41,15 @@
         {
             type: "text",
             align: "left",
-            msg: "Do you have a 401(k) balance at UoC?",
+            msg: "Would you like to manage your retirement accounts actively or passively?",
             delay: 1800,
         },
         {
             type: "input",
             align: "left",
-            input: {type: "buttons", buttons: ["Yes", "No"]},
-            msgYes: "Yes",
-            msgNo: "No"
+            input: {type: "buttons", buttons: ["Actively", "Passively"]},
+            msgYes: "Actively",
+            msgNo: "Passively"
         },
         {
             type: "text",
@@ -80,29 +80,16 @@
     const response = document.querySelector('message-right');
 
     const ul = document.querySelector('chat-message-list');
-    const li = document.querySelector('li');
+    const li = $('.message-right');
 
     // console.log(chatBox, chatBox[0].offsetHeight)
-    //
-    // var $ = function (selector) {
-    //     return document.querySelector(selector);
-    // };
-    // var links = $('#links').getElementsByTagName('li');
-    //
-    // // For each <li> inside #links
-    // for (var i = 0; i < links.length; i++) {
-    //     var link = links[i];
-    //     link.onclick = editResponse;
-    // }
-    //
-    //
-    // function editResponse() {
 
-    // }
 
     // for (let i=0; i <= li.length; i++) {
-    //     let liMsg = li[i];
-    //     liMsg.onclick = editResponse;
+    //     response.onclick = editResponse;
+    // }
+    // function editResponse() {
+    //     console.log("clicked")
     // }
 
     function updateScroll() {
@@ -121,7 +108,7 @@
         $(".chat-message-list").append("<input type='text' class='input' placeholder='Type Something..'>");
     }
     function showInputButtons(button_names) {
-        $(".chat-message-list").append("<div class='btn-container'>" + "<button class='btn' id='yes'>" + "Yes" + "</button>" + "<button class='btn' id='no'>" + "No" + "</button>" + "</div>");
+        $(".chat-message-list").append("<div class='btn-container'>" + "<button class='btn' id='yes'>" + button_names[0] + "</button>" + "<button class='btn' id='no'>" + button_names[1] + "</button>" + "</div>");
     }
     function displayBtnResponse(msgYes, msgNo, id) {
         $(':button').click(function () {

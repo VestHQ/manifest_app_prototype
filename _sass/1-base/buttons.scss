@@ -12,6 +12,7 @@
   }
 }
 .btn {
+  display: inline-block;
   background: $blue;
   color: #fff;
   font-family: $avenir;
@@ -20,7 +21,7 @@
   border: none;
   border-radius: 1rem;
   margin: 1rem auto;
-  padding: 1.4rem 3rem;
+  padding: 1.4rem 2.5rem;
   width: 20%;
   text-decoration: none;
   text-align: center;

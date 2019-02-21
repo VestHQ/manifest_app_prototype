@@ -92,10 +92,17 @@
   background: $blue;
   color: #fff;
   position: relative;
-  left: 19rem;
+  left: 55%;
   border-radius: $msg-border-right;
   animation:
           .5s msgExpandRight forwards .6s;
+
+  &::before {
+    content: url("../../assets/img/edit-icon.png");
+    position: absolute;
+    left: -1.5rem;
+    top: -1rem;
+  }
 }
 
 .input {
