@@ -12,6 +12,7 @@
 .u-font-mid { font-size: 2.2rem !important;}
 
 .u-width-mid { width: 66.666% !important;}
+.u-width-sm { width: 27% !important;}
 
 .btm-fixed {
   position: absolute;
@@ -20,7 +21,13 @@
   transform: translate(-50%, -50%);
 }
 
+.text-left {
+  text-align: left !important;
+}
 
+.u-mg-top-lg {
+  margin-top: 15vh !important;
+}
 
 .u-mg-btm-mid {
   margin-bottom: 4rem !important;
@@ -31,3 +38,11 @@
 }
 
 .u-font-wight-mid { font-weight: 500 !important;}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2.5rem auto 1rem auto;
+  width: 100%;
+}

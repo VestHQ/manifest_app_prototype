@@ -1,9 +1,16 @@
 .back-blue { background: $tiaa-blue !important;}
+.back-blue-light { background: $charles-blue !important;}
 
 .tiaa-logo {
   width: 18rem;
   height: auto;
   margin: 2rem auto;
+}
+
+.charles-logo {
+  width: 24rem;
+  height: auto;
+  margin: 5rem auto;
 }
 
 .tiaa-success {
@@ -19,4 +26,15 @@
   width: 6.5rem;
   height: auto;
   margin: 2rem auto;
+}
+
+.card {
+  height: 18rem;
+  width: auto;
+
+  &--1 {
+    height: 16rem;
+    width: auto;
+    margin: 0 auto;
+  }
 }
