@@ -40,15 +40,15 @@
         {
             type: "text",
             align: "left",
-            msg: "Would you like to manage your retirement accounts actively or passively?",
-            delay: 1800,
+            msg: "Would you like to manage your retirement accounts actively or passively?"
         },
         {
             type: "input",
             align: "left",
             input: {type: "buttons", buttons: ["Actively", "Passively"]},
             msgYes: "Actively",
-            msgNo: "Passively"
+            msgNo: "Passively",
+            delay: 1900
         },
         {
             type: "text",
@@ -96,6 +96,11 @@
     // function editResponse() {
     //     console.log("clicked")
     // }
+
+    //TODO
+    /*
+    * animationend event use js to add other animation
+    * */
 
     function updateScroll() {
         chatBox[0].offsetHeight += 200;

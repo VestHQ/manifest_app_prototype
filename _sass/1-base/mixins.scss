@@ -5,6 +5,14 @@
   transform: translate(-50%, -50%);
 }
 
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
 @mixin respond($breakpoint) {
   @if $breakpoint == small-phone {
     @media (max-width: 25em) { @content } //320px
