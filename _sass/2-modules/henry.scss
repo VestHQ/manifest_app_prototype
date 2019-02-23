@@ -11,9 +11,13 @@
     height: 100vh;
   }
 }
-.chat-container {
+.chat-message-list {
   //height: 100%;
-  height: 66rem;
+  //height: 66rem;
+
+  display: flex;
+  flex-direction: column;
+
 }
 .top {
   width: 100%;
@@ -76,16 +80,25 @@
   //  left: -6.4rem;
   //  animation: .3s movedown forwards;
   //}
+
+  //clear: right;
+  //display: inline-block;
 }
 
 .message-right {
-  @extend .message-left;
   display: inline-block;
+  font-family: $avenir;
+  padding: 1rem 1.6rem;
+  font-size: 1.5rem;
   background: $blue;
   color: #fff;
-  position: relative;
-  left: 55%;
   border-radius: $msg-border-right;
+
+  //float: right;
+  right: 3rem;
+  position: relative;
+
+  align-self: flex-end;
   animation:
           .5s msgExpandRight forwards .6s;
 
