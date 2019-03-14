@@ -100,13 +100,42 @@
     //TODO
     /*
     * animationend event use js to add other animation
+    * remove dot elements -at setInterval?
+    * append text
     * */
+
+    function editResponse() {
+        // select the response msg
+        if($('.message-right')) {
+            $('.message-right').each(function( index ) {
+                // console.log( index + ": " + $( this ).text() );
+                console.log(this)
+                this.onclick = function(){
+                    //modal
+                    alert("Are you sure you want to change?");
+
+                    //select following elements after clicked element
+                    $('.message-right').nextAll().css( "background-color", "red" );
+                    $('.message-right').nextAll().delete();
+
+                    // delete all following elements
+
+                    // render yes/no btns
+
+                }
+            })
+        }
+    }
+
+
 
     function updateScroll() {
         chatBox[0].offsetHeight += 200;
         chatBox[0].scrollTop = chatBox[0].scrollHeight - chatBox[0].clientHeight;
+         $('.chat-message-list').animate({ scrollTop: $('.chat-message-list').height() }, 600);
+         // console.log($('.chat-message-list').height())
     }
-    setInterval(updateScroll, 300);
+    // setInterval(updateScroll, 300);
 
 
     function postMessage(alignment, text) {
@@ -116,19 +145,23 @@
 
     function showInputBox() {
         $(".chat-message-list").append("<input type='text' class='input' placeholder='Type Something..'>");
+        updateScroll();
     }
     function showInputButtons(button_names) {
         $(".chat-message-list").append("<div class='btn-container'>" + "<button class='btn' id='yes'>" + button_names[0] + "</button>" + "<button class='btn' id='no'>" + button_names[1] + "</button>" + "</div>");
+        updateScroll();
     }
     function displayBtnResponse(msgYes, msgNo, id) {
         $(':button').click(function () {
             if (this.id === 'yes') {
                 postMessage("right", msgYes);
                 setTimeout(processCurrentMessage, 600);
+                editResponse();
             }
             else if (this.id === 'no') {
                 postMessage("right", msgNo);
-                setTimeout(processCurrentMessage, 600)
+                setTimeout(processCurrentMessage, 600);
+                editResponse();
             }
             $(':button').remove();
         });
