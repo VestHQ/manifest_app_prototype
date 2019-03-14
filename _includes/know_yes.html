@@ -3,12 +3,42 @@
 
     <h1 class="heading heading--secondary">Where do you want to transfer?</h1>
 
+<!--
     <div class="button-col">
         <a href="{{ site.baseurl }}/link_other" class="btn btn-dark-grey">Current 401(k)</a>
         <a href="{{ site.baseurl }}/link_other" class="btn btn-dark-grey">Current 401(b)</a>
         <a href="{{ site.baseurl }}/link_ira" class="btn">Current IRA</a>
         <a href="{{ site.baseurl }}/know_yes" class="btn btn-dark-grey">Into an IRA that needs to be opened</a>
         <a href="{{ site.baseurl }}/know_no" class="btn btn-dark-grey">Actually, I don't know</a>
-    </div>
+    </div> -->
+
+    <div class="col">
+            <div class="row">
+                <p class="option">Current 401(k)</p>
+                <a href="{{ site.baseurl }}/link_other"><img src="{{ site.baseurl }}/assets/img/silver-check.png" alt="" class="option__check"></a>
+            </div>
+
+             <div class="row">
+                <p class="option">Current 403(b)</p>
+                <a href="{{ site.baseurl }}/link_other"><img src="{{ site.baseurl }}/assets/img/silver-check.png" alt="" class="option__check"></a>
+             </div>
+
+             <div class="row">
+                <p class="option">Current IRA</p>
+                <a href="{{ site.baseurl }}/link_ira"><img src="{{ site.baseurl }}/assets/img/check_small.png" alt="" class="option__check"></a>
+             </div>
+
+             <div class="row">
+                <p class="option">Into an IRA that needs to be opened</p>
+                <a href="{{ site.baseurl }}/know_yes"><img src="{{ site.baseurl }}/assets/img/silver-check.png" alt="" class="option__check"></a>
+             </div>
+
+              <div class="row">
+                  <p class="option">No Other Accounts</p>
+                  <a href="{{ site.baseurl }}/know_no"><img src="{{ site.baseurl }}/assets/img/silver-check.png" alt="" class="option__check"></a>
+              </div>
+        </div>
+
+        <a href="{{ site.baseurl }}/link_ira" class="btn btm-fixed">Continue</a>
 
 </div>
