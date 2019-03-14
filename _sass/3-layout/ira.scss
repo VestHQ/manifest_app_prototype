@@ -13,6 +13,10 @@
   align-items: center;
   flex-wrap: wrap;
 
+  a {
+    max-width: 25rem;
+  }
+
   &__link {
     width: 50%;
     align-self: center;
@@ -26,6 +30,7 @@
     margin: 1rem 2rem;
     border-radius: 1rem;
 
+
     //&:not(:first-child) {
     //  background-image: linear-gradient(to bottom, rgba($light-grey, 0.8), rgba($light-grey, 0.8));
     //  z-index: 999;
@@ -34,6 +39,33 @@
     &--sm {
       height: 3rem;
       padding: 2rem;
+    }
+
+    &--green {
+      background-color: $green;
+    }
+    &--blue {
+      background-color: $charles-blue;
+    }
+    &--blue-mid {
+      background-color: $mutal-blue;
+    }
+    &--blue-pru {
+      background-color: $prudential-blue;
+      height: 2.5rem;
+      padding: 2rem 1.5rem;
+    }
+    &--dark-blue {
+      background-color: $wealthfront-blue;
+    }
+    &--light-green {
+      background-color: $td-green;
+    }
+    &--red-1 {
+      background-color: $empower-red;
+    }
+    &--red-2 {
+      background-color: $vangard-red;
     }
   }
 }
