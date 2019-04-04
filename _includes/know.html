@@ -6,30 +6,23 @@
 
     <h1 class="heading heading--top mg-btm-mid">Do you know where you want to transfer your TIAA account?</h1>
 
-<!--
-    <div class="button-col">
-        <a href="{{ site.baseurl }}/know_yes" class="btn btn-dark-grey">Yes, I do</a>
-        <a href="{{ site.baseurl }}/know_no" class="btn">No, I don't</a>
-        <a href="{{ site.baseurl }}/know" class="btn">Yes, but still help</a>
-    </div>  -->
-
     <div class="col">
         <div class="row">
             <p class="option">No, I don't</p>
-            <a href="{{ site.baseurl }}/know_no"><img src="{{ site.baseurl }}/assets/img/silver-check.png" alt="" class="option__check"></a>
+            <img src="{{ site.baseurl }}/assets/img/silver-check.png" alt="" class="option__check" onclick="toggleImg()" id="one">
         </div>
 
          <div class="row">
             <p class="option">Yes, I do</p>
-            <a href="{{ site.baseurl }}/know_yes"><img src="{{ site.baseurl }}/assets/img/silver-check.png" alt="" class="option__check"></a>
+             <img src="{{ site.baseurl }}/assets/img/silver-check.png" alt="" class="option__check" onclick="toggleImg()" id="two">
          </div>
 
          <div class="row">
             <p class="option">Yes, but still help</p>
-            <a href="{{ site.baseurl }}/know_yes"><img src="{{ site.baseurl }}/assets/img/check_small.png" alt="" class="option__check"></a>
+             <img src="{{ site.baseurl }}/assets/img/silver-check.png" alt="" class="option__check" onclick="toggleImg()" id="three">
          </div>
     </div>
 
-    <a href="{{ site.baseurl }}/know_yes" class="btn btm-fixed">Continue</a>
+    <a id="addLink" class="btn btm-fixed">Continue</a>
 
 </div>

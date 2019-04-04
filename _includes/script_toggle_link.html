@@ -1,0 +1,45 @@
+<script>
+    const unchecked = "{{ site.baseurl }}/assets/img/silver-check.png";
+    const checked = "{{ site.baseurl }}/assets/img/check_small.png";
+
+
+    // select button element to add href to
+    const button = document.querySelector('.btn');
+
+    const row = document.getElementsByClassName('row');
+    const image = row.getElementsByTagName("img");
+    console.log(image)
+
+
+    const link = document.getElementById('addLink');
+
+    // add href of checked element
+
+    let isChecked = false;
+
+    // function toggleImg(e) {
+    //     if(e.target.src === unchecked) {
+    //         e.target.src = checked
+    //     } else {
+    //         e.target.src = unchecked
+    //     }
+    //
+    //     // console.log(e)
+    //     // isChecked = !isChecked;
+    //     // isChecked ? e.currentTarget.src = checked : e.currentTarget.src = unchecked
+    //
+    //     for (let i = 0; i < image.length; ++i) {
+    //         image[i].onclick = function(e) {
+    //             console.log(image[i].src)
+    //             if(image[i].src === unchecked) {
+    //                 console.log("entered if")
+    //                 image[i].src = checked
+    //             } else {
+    //                 image[i].src = unchecked
+    //             }
+    //         }
+    //     }
+    // }
+
+
+</script>

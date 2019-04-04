@@ -37,12 +37,26 @@
 
   .item {
     font-size: 1.6rem;
-    padding: 0 10%;
+    padding: 0 15%;
     margin-bottom: 2rem;
+    position: relative;
+    cursor: pointer;
 
-    &::before {
-      content: url("../../assets/img/check_small.png");
-      vertical-align: -40%;
+    &__img {
+      //display: flex;
+      //justify-content: center;
+      //align-items: center;
+      width: 1.8rem;
+      height: auto;
+      margin-right: 1rem;
+      position: absolute;
+      top: 1rem;
+      left: 3rem;
     }
+
+    //&::before {
+    //  content: url("../../assets/img/check_small.png");
+    //  vertical-align: -40%;
+    //}
   }
 }
