@@ -33,7 +33,6 @@
 .list {
   display: list-item;
   position: relative;
-  //list-style-image: url("../../assets/img/check.png") !important;
 
   .item {
     font-size: 1.6rem;
@@ -43,9 +42,6 @@
     cursor: pointer;
 
     &__img {
-      //display: flex;
-      //justify-content: center;
-      //align-items: center;
       width: 1.8rem;
       height: auto;
       margin-right: 1rem;
@@ -53,10 +49,20 @@
       top: 1rem;
       left: 3rem;
     }
-
-    //&::before {
-    //  content: url("../../assets/img/check_small.png");
-    //  vertical-align: -40%;
-    //}
   }
+}
+
+.unchecked {
+  font-size: 1.8rem;
+  color: $silver;
+  cursor: pointer;
+  margin-right: 1rem;
+  position: absolute;
+  top: 1rem;
+  left: 3rem;
+}
+
+.checked {
+  @extend .unchecked;
+  color: $blue;
 }

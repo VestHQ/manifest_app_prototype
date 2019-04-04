@@ -197,23 +197,5 @@
 
     processCurrentMessage();
 
-    // toggle image
-    const list = document.querySelector('.list');
-    const items = list.getElementsByTagName("li");
-
-    const unchecked = "{{ site.baseurl }}/assets/img/silver-check.png";
-    const checked = "{{ site.baseurl }}/assets/img/check_small.png";
-
-
-    for (let i = 0; i < items.length; ++i) {
-        items[i].onclick = function (e) {
-            items[i].firstElementChild.src = checked;
-
-            if(items[i].firstElementChild.src === checked) {
-                items[i].firstElementChild.src = unchecked;
-            }
-        }
-    }
-
 
 </script>

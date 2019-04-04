@@ -1,9 +1,4 @@
-<script>
 
-//    onclick="this.src.endsWith(unchecked)? checked : unchecked;"
-
-
-</script>
 
 <div class="chat welcome">
  <div class="top">
@@ -15,22 +10,70 @@
 
     <ul class="list">
         <li class="item">
-                <img src="{{ site.baseurl }}/assets/img/silver-check.png" name="check1" class="item__img">
+            <i onclick="toggleClass(this)" class="fas fa-check-circle unchecked"></i>
             You have to have worked at this company (company name)
         </li>
         <li class="item">
-                <img src="{{ site.baseurl }}/assets/img/silver-check.png" alt="" class="item__img">
+            <i onclick="toggleClass(this)" class="fas fa-check-circle unchecked"></i>
             You have to be terminated from this company (company name)
         </li>
         <li class="item">
-            <img src="{{ site.baseurl }}/assets/img/silver-check.png" alt="" class="item__img">
+            <i onclick="toggleClass(this)" class="fas fa-check-circle unchecked"></i>
             You must have 401(k) balance in order to make the transfer
         </li>
         <li class="item">
-            <img src="{{ site.baseurl }}/assets/img/silver-check.png" alt="" class="item__img">
+            <i onclick="toggleClass(this)" class="fas fa-check-circle unchecked"></i>
             You would like to transfer/rollover your 401(k) or want to learn about your options to rollover/transfer
         </li>
     </ul>
 
     <a href="{{ site.baseurl }}/create_account" class="btn-large btm-fixed">Save &nbsp; &nbsp; &rarr;</a>
 </div>
+
+<script>
+
+    function toggleClass(x) {
+        x.classList.toggle('checked');
+    }
+
+    //    onclick="this.src.endsWith(unchecked)? checked : unchecked;"
+
+    // toggle image
+    const list = document.querySelector('.list');
+    const items = list.getElementsByTagName("li");
+
+    const unchecked = "{{ site.baseurl }}/assets/img/silver-check.png";
+    const checked = "{{ site.baseurl }}/assets/img/check_small.png";
+
+
+    // for (let i = 0; i < items.length; ++i) {
+    //     items[i].onclick = function (e) {
+    //         if(items[i].firstElementChild.src === checked) {
+    //             items[i].firstElementChild.src = unchecked;
+    //         } else {
+    //             items[i].firstElementChild.src = checked;
+    //         }
+    //     }
+    // }
+
+    function toggleCheck(e) {
+        // for (let i = 0; i < items.length; ++i) {
+        //     console.log(items[i].firstElementChild)
+        //     if (items[i].firstElementChild.src === checked) {
+        //         items[i].firstElementChild.src = unchecked;
+        //         console.log("unchecked")
+        //     }
+        //     else {
+        //         items[i].firstElementChild.src = checked;
+        //         console.log("checked")
+        //     }
+        // }
+
+        e.classList.toggle("{{ site.baseurl }}/assets/img/check_small.png")
+        // if (items[0].firstElementChild.src === checked) {
+        //     items[0].firstElementChild.src = unchecked;
+        // } else {
+        //     items[0].firstElementChild.src = checked;
+        // }
+    }
+</script>
