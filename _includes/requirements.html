@@ -38,23 +38,11 @@
 
     //    onclick="this.src.endsWith(unchecked)? checked : unchecked;"
 
-    // toggle image
     const list = document.querySelector('.list');
     const items = list.getElementsByTagName("li");
 
     const unchecked = "{{ site.baseurl }}/assets/img/silver-check.png";
     const checked = "{{ site.baseurl }}/assets/img/check_small.png";
-
-
-    // for (let i = 0; i < items.length; ++i) {
-    //     items[i].onclick = function (e) {
-    //         if(items[i].firstElementChild.src === checked) {
-    //             items[i].firstElementChild.src = unchecked;
-    //         } else {
-    //             items[i].firstElementChild.src = checked;
-    //         }
-    //     }
-    // }
 
     function toggleCheck(e) {
         // for (let i = 0; i < items.length; ++i) {
@@ -70,10 +58,5 @@
         // }
 
         e.classList.toggle("{{ site.baseurl }}/assets/img/check_small.png")
-        // if (items[0].firstElementChild.src === checked) {
-        //     items[0].firstElementChild.src = unchecked;
-        // } else {
-        //     items[0].firstElementChild.src = checked;
-        // }
     }
 </script>

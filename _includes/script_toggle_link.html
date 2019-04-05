@@ -1,45 +1,89 @@
+<script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous">
+</script>
+<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js" integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E=" crossorigin="anonymous">
+</script>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 <script>
-    const unchecked = "{{ site.baseurl }}/assets/img/silver-check.png";
-    const checked = "{{ site.baseurl }}/assets/img/check_small.png";
+    // const unchecked = "{{ site.baseurl }}/assets/img/silver-check.png";
+    // const checked = "{{ site.baseurl }}/assets/img/check_small.png";
 
+    // // select button element to add href to
 
-    // select button element to add href to
-    const button = document.querySelector('.btn');
-
-    const row = document.getElementsByClassName('row');
-    const image = row.getElementsByTagName("img");
-    console.log(image)
-
-
-    const link = document.getElementById('addLink');
-
-    // add href of checked element
-
-    let isChecked = false;
-
+    // let isChecked = false;
     // function toggleImg(e) {
     //     if(e.target.src === unchecked) {
     //         e.target.src = checked
     //     } else {
     //         e.target.src = unchecked
     //     }
-    //
-    //     // console.log(e)
-    //     // isChecked = !isChecked;
-    //     // isChecked ? e.currentTarget.src = checked : e.currentTarget.src = unchecked
-    //
-    //     for (let i = 0; i < image.length; ++i) {
-    //         image[i].onclick = function(e) {
-    //             console.log(image[i].src)
-    //             if(image[i].src === unchecked) {
-    //                 console.log("entered if")
-    //                 image[i].src = checked
-    //             } else {
-    //                 image[i].src = unchecked
-    //             }
-    //         }
-    //     }
-    // }
 
+    //     // isChecked ? e.currentTarget.src = checked : e.currentTarget.src = unchecked
+
+    const links = ["{{ site.baseurl }}/know_yes", "{{ site.baseurl }}/know_no"];
+
+    const ul = document.getElementsByTagName('ul')[0];
+    const $ul = $( "ul" )[0];
+
+    const AllChecksArr = [];
+
+    const yes = $( "#yes" );
+    const no = $( "#no" );
+    const button = document.querySelector('.btn');
+
+    var AllChecks = document.querySelectorAll("#list li i");
+    // console.log(AllChecks)
+
+    for(let j=0; j < AllChecks.length; j++){
+        AllChecksArr.push(AllChecks[j]);
+        console.log(AllChecks[j])
+
+        AllChecks[j].onclick = function(){
+            console.log('meow')
+        }
+    }
+    // console.log(AllChecksArr)
+
+    for(let i=0; i < AllChecksArr.length; i++) {
+        AllChecksArr[i].onclick = function(){
+            // console.log(AllChecksArr[i].append('<b>Test</b>'));
+        };
+    }
+
+
+
+    // $( document ).ready(function() {
+    //    if($ul.hasClass('')) {
+    //        console.log('ok')
+    //    }
+    // })
+
+    function selectOneLink(x) {
+
+        // if other element in ul has class
+        // then remove class from all other elements
+        if(x.classList.contains('unchecked-right')){
+            x.classList.add('checked-right');
+            x.append('<b>Test</b>')
+        }
+
+        // if()
+
+        // for(let i=0; i < )
+
+    }
+
+    /*
+    * check if an element is checked by class
+    * id of selected element can correlate to an index to an array of links
+    *
+    * assign links to each element
+    * select element
+    * add that elements link to href of btn
+    * if user selects other element unselect previous element
+    * and remove and replace link to btn
+    * */
 
 </script>

@@ -6,22 +6,37 @@
 
     <h1 class="heading heading--top mg-btm-mid">Do you know where you want to transfer your TIAA account?</h1>
 
-    <div class="col">
-        <div class="row">
+<!--    <div class="col">-->
+<!--        <div class="row">-->
+<!--            <p class="option">No, I don't</p>-->
+<!--            <img src="{{ site.baseurl }}/assets/img/silver-check.png" alt="" class="option__check" onclick="toggleImg()" id="one">-->
+<!--        </div>-->
+
+<!--         <div class="row">-->
+<!--            <p class="option">Yes, I do</p>-->
+<!--             <img src="{{ site.baseurl }}/assets/img/silver-check.png" alt="" class="option__check" onclick="toggleImg()" id="two">-->
+<!--         </div>-->
+
+<!--         <div class="row">-->
+<!--            <p class="option">Yes, but still help</p>-->
+<!--             <img src="{{ site.baseurl }}/assets/img/silver-check.png" alt="" class="option__check" onclick="toggleImg()" id="three">-->
+<!--         </div>-->
+<!--    </div>-->
+
+    <ul class="col" id="list">
+        <li class="row">
             <p class="option">No, I don't</p>
-            <img src="{{ site.baseurl }}/assets/img/silver-check.png" alt="" class="option__check" onclick="toggleImg()" id="one">
-        </div>
-
-         <div class="row">
+            <i onclick="selectOneLink(this)" class="fas fa-check-circle unchecked-right" id="no"></i>
+        </li>
+        <li class="row">
             <p class="option">Yes, I do</p>
-             <img src="{{ site.baseurl }}/assets/img/silver-check.png" alt="" class="option__check" onclick="toggleImg()" id="two">
-         </div>
-
-         <div class="row">
+            <i onclick="selectOneLink(this)" class="fas fa-check-circle unchecked-right" id="yes"></i>
+        </li>
+        <li class="row">
             <p class="option">Yes, but still help</p>
-             <img src="{{ site.baseurl }}/assets/img/silver-check.png" alt="" class="option__check" onclick="toggleImg()" id="three">
-         </div>
-    </div>
+            <i onclick="selectOneLink(this)" class="fas fa-check-circle unchecked-right"></i>
+        </li>
+    </ul>
 
     <a id="addLink" class="btn btm-fixed">Continue</a>
 
