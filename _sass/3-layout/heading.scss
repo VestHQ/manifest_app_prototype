@@ -1,5 +1,5 @@
 .heading {
-  color: $dark-grey;
+  color: $grey;
   font-size: 3.5rem;
   line-height: 1.4;
   width: 55%;
@@ -24,8 +24,10 @@
   }
   &--top {
     width: 80%;
+    font-family: $inter-bold;
+    font-weight: 800;
     color: $dark-grey;
-    font-size: 2.4rem;
+    font-size: 2.2rem;
     margin: 2rem auto;
   }
   &--grey {
@@ -45,13 +47,16 @@
 }
 .text {
   text-decoration: none;
-  font-family: $avenir;
+  font-family: $inter-bold;
+  color: lighten($dark-grey, 12%);
+  font-weight: 600;
   font-size: 1.7rem;
   padding: 3rem;
   line-height: 1.4;
 
   &--grey {
-    color: $light-grey;
+    font-family: $inter-light;
+    color: lighten($dark-grey, 20%);
     font-weight: 600;
     font-size: 1.5rem;
     text-align: center;

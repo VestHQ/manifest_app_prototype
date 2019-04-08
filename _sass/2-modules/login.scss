@@ -6,10 +6,11 @@
 }
 
 .placeholder {
-  width: 20rem;
+  width: 12rem;
   height: 12rem;
   margin: 2rem auto;
-  background: $light-grey-2;
+  border-radius: 50%;
+  background: $silver;
 }
 
 .dot-container {
@@ -86,4 +87,24 @@
 .checked-right {
   @extend .unchecked-right;
   color: $blue;
+}
+
+.line--2 {
+  width: 100%;
+  background: $grey;
+  height: 1px !important;
+}
+
+.circle-number {
+  display: inline-block;
+  text-align: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: $blue;
+  color: #fff;
+  font-size: 1.8rem;
+  padding: 3px 2px 0 1px;
+  margin-right: 2rem;
+  margin-left: -3rem;
 }

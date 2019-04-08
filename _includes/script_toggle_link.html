@@ -38,13 +38,12 @@
 
     for(let j=0; j < AllChecks.length; j++){
         AllChecksArr.push(AllChecks[j]);
-        console.log(AllChecks[j])
+        // console.log(AllChecks[j])
 
         AllChecks[j].onclick = function(){
             console.log('meow')
         }
     }
-    // console.log(AllChecksArr)
 
     for(let i=0; i < AllChecksArr.length; i++) {
         AllChecksArr[i].onclick = function(){
@@ -53,37 +52,22 @@
     }
 
 
-
-    // $( document ).ready(function() {
-    //    if($ul.hasClass('')) {
-    //        console.log('ok')
-    //    }
-    // })
-
     function selectOneLink(x) {
-
         // if other element in ul has class
         // then remove class from all other elements
-        if(x.classList.contains('unchecked-right')){
-            x.classList.add('checked-right');
-            x.append('<b>Test</b>')
-        }
+        // if(x.classList.contains('unchecked-right')){
+        //     x.classList.add('checked-right');
+        //     x.append('<b>Test</b>')
+        // }
 
-        // if()
-
-        // for(let i=0; i < )
-
+        alert("meow")
     }
 
-    /*
-    * check if an element is checked by class
-    * id of selected element can correlate to an index to an array of links
-    *
-    * assign links to each element
-    * select element
-    * add that elements link to href of btn
-    * if user selects other element unselect previous element
-    * and remove and replace link to btn
+    /* TODO
+    * look at state of checks then use that index
+    * alert index of selected element
+    * alert link
+    * link to other page
     * */
 
 </script>

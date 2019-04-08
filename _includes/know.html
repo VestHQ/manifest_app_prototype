@@ -4,7 +4,7 @@
         <div class="line"></div>
     </div>
 
-    <h1 class="heading heading--top mg-btm-mid">Do you know where you want to transfer your TIAA account?</h1>
+    <h1 class="heading heading--top mg-btm-mid">Do you know where you want to <span class="heading--blue">transfer your TIAA account?</span></h1>
 
 <!--    <div class="col">-->
 <!--        <div class="row">-->
@@ -26,18 +26,14 @@
     <ul class="col" id="list">
         <li class="row">
             <p class="option">No, I don't</p>
-            <i onclick="selectOneLink(this)" class="fas fa-check-circle unchecked-right" id="no"></i>
+            <i class="fas fa-check-circle unchecked-right" id="no"></i>
         </li>
         <li class="row">
             <p class="option">Yes, I do</p>
-            <i onclick="selectOneLink(this)" class="fas fa-check-circle unchecked-right" id="yes"></i>
-        </li>
-        <li class="row">
-            <p class="option">Yes, but still help</p>
-            <i onclick="selectOneLink(this)" class="fas fa-check-circle unchecked-right"></i>
+            <i class="fas fa-check-circle unchecked-right" id="yes"></i>
         </li>
     </ul>
 
-    <a id="addLink" class="btn btm-fixed">Continue</a>
+    <a id="addLink" class="btn btm-fixed" onclick="selectOneLink()">Continue</a>
 
 </div>
