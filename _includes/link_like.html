@@ -6,28 +6,35 @@
 
     <h1 class="heading--top">How would you rate your current IRA provider?</h1>
 
-           <div class="col">
-                        <div class="row">
-                            <p class="option">Love it</p>
-                            <a href="{{ site.baseurl }}/link_third"><img src="{{ site.baseurl }}/assets/img/silver-check.png" alt="" class="option__check"></a>
-                        </div>
+    <ul class="col" id="list">
+        <li class="radio-row">
+            <label for="selection" class="radio-label"> Love it
+                <input type="radio" name="selection" value="{{ site.baseurl }}/link_third" onclick="onCheck(this)" class="radio-input">
+                <span class="radio-img"></span>
+            </label>
+        </li>
 
-                         <div class="row">
-                            <p class="option">Like it</p>
-                            <a href="{{ site.baseurl }}/link_third"><img src="{{ site.baseurl }}/assets/img/silver-check.png" alt="" class="option__check"></a>
-                         </div>
+        <li class="radio-row">
+            <label for="selection" class="radio-label"> Like it
+                <input type="radio" name="selection" value="{{ site.baseurl }}/link_third" onclick="onCheck(this)" class="radio-input">
+                <span class="radio-img"></span>
+            </label>
+        </li>
 
-                         <div class="row">
-                            <p class="option">Don't mind it</p>
-                            <a href="{{ site.baseurl }}/link_third"><img src="{{ site.baseurl }}/assets/img/check_small.png" alt="" class="option__check"></a>
-                         </div>
+        <li class="radio-row">
+            <label for="selection" class="radio-label"> Don't mind it
+                <input type="radio" name="selection" value="{{ site.baseurl }}/link_third" onclick="onCheck(this)" class="radio-input">
+                <span class="radio-img"></span>
+            </label>
+        </li>
 
-                         <div class="row">
-                            <p class="option">Hate it</p>
-                            <a href="{{ site.baseurl }}/link_third"><img src="{{ site.baseurl }}/assets/img/silver-check.png" alt="" class="option__check"></a>
-                         </div>
-                    </div>
+        <li class="radio-row">
+            <label for="selection" class="radio-label"> Hate it
+                <input type="radio" name="selection" value="{{ site.baseurl }}/link_third" onclick="onCheck(this)" class="radio-input">
+                <span class="radio-img"></span>
+            </label>
+        </li>
+    </ul>
 
-                    <a href="{{ site.baseurl }}/link_third" class="btn btm-fixed">Continue</a>
-        </div>
+    <a id="addLink" class="btn--disabled btm-fixed">Continue</a>
 </div>

@@ -4,44 +4,34 @@
         <div class="line"></div>
     </div>
 
-    <h1 class="heading--top">Link your <span class="highlight--blue">second account</span></h1>
+    <h1 class="heading--top">Do you have any other accounts? Link your <span class="highlight--blue">second account</span></h1>
 
     <p class="heading--grey">Please select the second one to link</p>
 
-<!--
-    <div class="button-col">
-        <a href="{{ site.baseurl }}/link_other" class="btn btn-dark-grey">Current 401(k)</a>
-        <a href="{{ site.baseurl }}/link_other" class="btn btn-dark-grey">Current 401(b)</a>
-        <a href="{{ site.baseurl }}/link_ira" class="btn">Current IRA</a>
-        <a href="{{ site.baseurl }}/henry" class="btn btn-dark-grey">No Other Accounts</a>
-    </div>  -->
+    <ul class="col" id="list">
+        <li class="radio-row">
+            <label for="selection" class="radio-label"> Old 401(k) or 403(b)
+                <input type="radio" name="selection" value="{{ site.baseurl }}/link_other" onclick="onCheck(this)" class="radio-input">
 
-    <div class="col">
-                <div class="row">
-                    <p class="option">Current 401(k)</p>
-                    <a href="{{ site.baseurl }}/link_other"><img src="{{ site.baseurl }}/assets/img/check_small.png" alt="" class="option__check"></a>
-                </div>
+                <span class="radio-img"></span>
+            </label>
+        </li>
+        <li class="radio-row">
+            <label for="selection" class="radio-label"> Current IRA
+                <input type="radio" name="selection" value="{{ site.baseurl }}/link_ira" onclick="onCheck(this)" class="radio-input">
 
-                 <div class="row">
-                    <p class="option">Current 403(b)</p>
-                    <a href="{{ site.baseurl }}/link_other"><img src="{{ site.baseurl }}/assets/img/silver-check.png" alt="" class="option__check"></a>
-                 </div>
+                <span class="radio-img"></span>
+            </label>
+        </li>
 
-                 <div class="row">
-                    <p class="option">Current IRA</p>
-                    <a href="{{ site.baseurl }}/link_ira"><img src="{{ site.baseurl }}/assets/img/silver-check.png" alt="" class="option__check"></a>
-                 </div>
+        <li class="radio-row">
+            <label for="selection" class="radio-label"> No Other Accounts
+                <input type="radio" name="selection" value="{{ site.baseurl }}/account_aggregation" onclick="onCheck(this)" class="radio-input">
 
-                 <div class="row">
-                    <p class="option">Into an IRA that needs to be opened</p>
-                    <a href="{{ site.baseurl }}/know_yes"><img src="{{ site.baseurl }}/assets/img/silver-check.png" alt="" class="option__check"></a>
-                 </div>
+                <span class="radio-img"></span>
+            </label>
+        </li>
+    </ul>
 
-                  <div class="row">
-                      <p class="option">No Other Accounts</p>
-                      <a href="{{ site.baseurl }}/know_no"><img src="{{ site.baseurl }}/assets/img/silver-check.png" alt="" class="option__check"></a>
-                  </div>
-            </div>
-
-            <a href="{{ site.baseurl }}/link_ira" class="btn">Continue</a>
+    <a id="addLink" class="btn--disabled btm-fixed">Continue</a>
 </div>

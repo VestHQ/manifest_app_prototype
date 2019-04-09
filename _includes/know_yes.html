@@ -4,44 +4,40 @@
         <div class="line"></div>
     </div>
 
-    <h1 class="heading heading--secondary">Where do you want to transfer?</h1>
+    <h1 class="heading heading--top heading--secondary">What type of account is your <span class="heading--blue">desination account</span>?</h1>
 
-<!--
-    <div class="button-col">
-        <a href="{{ site.baseurl }}/link_other" class="btn btn-dark-grey">Current 401(k)</a>
-        <a href="{{ site.baseurl }}/link_other" class="btn btn-dark-grey">Current 401(b)</a>
-        <a href="{{ site.baseurl }}/link_ira" class="btn">Current IRA</a>
-        <a href="{{ site.baseurl }}/know_yes" class="btn btn-dark-grey">Into an IRA that needs to be opened</a>
-        <a href="{{ site.baseurl }}/know_no" class="btn btn-dark-grey">Actually, I don't know</a>
-    </div> -->
+    <p class="heading--grey">Please select the first one to link</p>
 
-    <div class="col">
-            <div class="row">
-                <p class="option">Current 401(k)</p>
-                <a href="{{ site.baseurl }}/link_other"><img src="{{ site.baseurl }}/assets/img/silver-check.png" alt="" class="option__check"></a>
-            </div>
+    <ul class="col" id="list">
+        <li class="radio-row">
+            <label for="selection" class="radio-label"> A 401(k) or 403(b) account
+                <input type="radio" name="selection" value="{{ site.baseurl }}/link_other" onclick="onCheck(this)" class="radio-input">
+                <span class="radio-img"></span>
+            </label>
+        </li>
 
-             <div class="row">
-                <p class="option">Current 403(b)</p>
-                <a href="{{ site.baseurl }}/link_other"><img src="{{ site.baseurl }}/assets/img/silver-check.png" alt="" class="option__check"></a>
-             </div>
+        <li class="radio-row">
+            <label for="selection" class="radio-label"> An IRA account
+                <input type="radio" name="selection" value="{{ site.baseurl }}/link_ira" onclick="onCheck(this)" class="radio-input">
+                <span class="radio-img"></span>
+            </label>
+        </li>
 
-             <div class="row">
-                <p class="option">Current IRA</p>
-                <a href="{{ site.baseurl }}/link_ira"><img src="{{ site.baseurl }}/assets/img/check_small.png" alt="" class="option__check"></a>
-             </div>
+        <li class="radio-row">
+            <label for="selection" class="radio-label"> A new IRA
+                <input type="radio" name="selection" value="{{ site.baseurl }}/link_ira" onclick="onCheck(this)" class="radio-input">
+                <span class="radio-img"></span>
+            </label>
+        </li>
 
-             <div class="row">
-                <p class="option">Into an IRA that needs to be opened</p>
-                <a href="{{ site.baseurl }}/know_yes"><img src="{{ site.baseurl }}/assets/img/silver-check.png" alt="" class="option__check"></a>
-             </div>
+        <li class="radio-row">
+            <label for="selection" class="radio-label"> Actually. I'm not sure
+                <input type="radio" name="selection" value="{{ site.baseurl }}/dont_worry" onclick="onCheck(this)" class="radio-input">
+                <span class="radio-img"></span>
+            </label>
+        </li>
+    </ul>
 
-              <div class="row">
-                  <p class="option">No Other Accounts</p>
-                  <a href="{{ site.baseurl }}/know_no"><img src="{{ site.baseurl }}/assets/img/silver-check.png" alt="" class="option__check"></a>
-              </div>
-        </div>
-
-        <a href="{{ site.baseurl }}/link_ira" class="btn">Continue</a>
+    <a id="addLink" class="btn--disabled btm-fixed">Continue</a>
 
 </div>
