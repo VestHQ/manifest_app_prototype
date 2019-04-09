@@ -79,3 +79,12 @@
     padding: 0;
   }
 }
+
+.grey-bold {
+  font-family: $inter-bold;
+  font-weight: bold;
+  color: $dark-grey;
+  font-size: 2rem !important;
+  width: 80%;
+  margin: 3rem auto;
+}
