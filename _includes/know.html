@@ -7,14 +7,18 @@
     <h1 class="heading heading--top mg-btm-mid">Do you know where you want to <span class="heading--blue">transfer your TIAA account?</span></h1>
 
     <ul class="col" id="list">
-        <li class="row">
-            <label for="selection" class="option"> No, I don't
-                <input type="radio" name="selection" id="no" value="{{ site.baseurl }}/dont_worry" onclick="onCheck(this)">
+        <li class="radio-row">
+            <label for="selection" class="radio-label"> No, I don't
+                <input type="radio" name="selection" id="no" value="{{ site.baseurl }}/dont_worry" onclick="onCheck(this)" class="radio-input">
+
+                <span class="radio-img"></span>
             </label>
         </li>
-        <li class="row">
-            <label for="selection" class="option"> Yes, I do
-                <input type="radio" name="selection" id="yes" value="{{ site.baseurl }}/know_yes" onclick="onCheck(this)">
+        <li class="radio-row">
+            <label for="selection" class="radio-label"> Yes, I do
+                <input type="radio" name="selection" id="yes" value="{{ site.baseurl }}/know_yes" onclick="onCheck(this)" class="radio-input">
+
+                <span class="radio-img"></span>
             </label>
         </li>
     </ul>

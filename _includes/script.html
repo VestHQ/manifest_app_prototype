@@ -10,21 +10,18 @@
     const debugAccelerator = 1; // switch to 1
     const chatMessages = [
         {
-            name: "ms1",
             type: "text",
             align: "left",
             msg: "Hi! I'm Henry, and I'm your transfer specialist.",
             delay: 800,
         },
         {
-            name: "ms2",
             type: "text",
             align: "left",
             msg: "Nice work on choosing to consolidate your retirement accounts. Choosing the right account can be hard, but I'm here to help!",
             delay: 1200,
         },
         {
-            name: "ms3",
             type: "text",
             align: "left",
             msg: "Do you have any open loans in your TIAA 401(k)?",
@@ -34,7 +31,6 @@
             type: "input",
             align: "left",
             input: {type: "buttons", buttons: ["Yes", "No"]},
-            // delay: 1800,
         },
         {
             type: "text",
@@ -113,8 +109,8 @@
     const chatMessageList = document.getElementById('message-list');
     const chatMessageListNonRemovableCount = chatMessageList.childNodes.length;
 
-    console.log($('.chat-message-list'))
-    console.log(chatMessageList)
+    // console.log($('.chat-message-list'))
+    // console.log(chatMessageList)
 
     function updateScroll() {
         chatBox[0].offsetHeight += 200;

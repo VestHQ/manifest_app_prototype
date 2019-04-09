@@ -78,8 +78,70 @@
 .charles-btn {background: #3DB6E2 !important;}
 .wells-btn {background: #B74843 !important;}
 
-.option {
+
+
+.radio-row {
+  position: relative;
+  margin-bottom: 4rem;
+}
+
+.radio-label {
   font-size: 1.8rem;
   font-weight: 700;
+  margin-left: 3rem;
+}
+
+.radio-input {
 
 }
+
+.radio-img {
+  content: url("../../assets/img/silver-check.png");
+  height: 2rem;
+  width: 2rem;
+  position: absolute;
+  right: 3rem;
+}
+
+[type=radio] {
+  position: absolute;
+  right: 3rem;
+  opacity: 0;
+  height: 2rem;
+  width: 2rem;
+  z-index: 2;
+  cursor: pointer;
+}
+
+:checked + .radio-img {
+  content: url("../../assets/img/check_small.png");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
