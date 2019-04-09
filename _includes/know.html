@@ -6,34 +6,19 @@
 
     <h1 class="heading heading--top mg-btm-mid">Do you know where you want to <span class="heading--blue">transfer your TIAA account?</span></h1>
 
-<!--    <div class="col">-->
-<!--        <div class="row">-->
-<!--            <p class="option">No, I don't</p>-->
-<!--            <img src="{{ site.baseurl }}/assets/img/silver-check.png" alt="" class="option__check" onclick="toggleImg()" id="one">-->
-<!--        </div>-->
-
-<!--         <div class="row">-->
-<!--            <p class="option">Yes, I do</p>-->
-<!--             <img src="{{ site.baseurl }}/assets/img/silver-check.png" alt="" class="option__check" onclick="toggleImg()" id="two">-->
-<!--         </div>-->
-
-<!--         <div class="row">-->
-<!--            <p class="option">Yes, but still help</p>-->
-<!--             <img src="{{ site.baseurl }}/assets/img/silver-check.png" alt="" class="option__check" onclick="toggleImg()" id="three">-->
-<!--         </div>-->
-<!--    </div>-->
-
     <ul class="col" id="list">
         <li class="row">
-            <p class="option">No, I don't</p>
-            <i class="fas fa-check-circle unchecked-right" id="no"></i>
+            <label for="selection" class="option"> No, I don't
+                <input type="radio" name="selection" id="no" value="{{ site.baseurl }}/dont_worry" onclick="onCheck(this)">
+            </label>
         </li>
         <li class="row">
-            <p class="option">Yes, I do</p>
-            <i class="fas fa-check-circle unchecked-right" id="yes"></i>
+            <label for="selection" class="option"> Yes, I do
+                <input type="radio" name="selection" id="yes" value="{{ site.baseurl }}/know_yes" onclick="onCheck(this)">
+            </label>
         </li>
     </ul>
 
-    <a id="addLink" class="btn btm-fixed" onclick="selectOneLink()">Continue</a>
+    <a id="addLink" class="btn--disabled btm-fixed">Continue</a>
 
 </div>

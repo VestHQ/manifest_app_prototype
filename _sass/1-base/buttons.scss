@@ -27,6 +27,13 @@
   text-align: center;
   cursor: pointer;
 
+  &--disabled {
+    @extend .btn;
+    //pointer-events: none;
+    background: $light-grey;
+
+  }
+
   &:hover,
   &:focus {
     outline: none;
@@ -74,4 +81,5 @@
 .option {
   font-size: 1.8rem;
   font-weight: 700;
+
 }
