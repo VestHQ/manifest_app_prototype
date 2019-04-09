@@ -27,7 +27,7 @@
             name: "ms3",
             type: "text",
             align: "left",
-            msg: "Do you have at least 6 months of personal savings?",
+            msg: "Do you have any open loans in your TIAA 401(k)?",
             delay: 1500,
         },
         {
@@ -39,7 +39,31 @@
         {
             type: "text",
             align: "left",
-            msg: "Would you like to manage your retirement accounts actively or passively?"
+            msg: "Do you have at least 6 months of personal savings?"
+        },
+        {
+            type: "input",
+            align: "left",
+            input: {type: "buttons", buttons: ["Yes", "No"]},
+            delay: 1900
+        },
+        {
+            type: "text",
+            align: "left",
+            msg: "Would you need the option to take out a loan from your retirement savings in the future?",
+            delay: 1800,
+        },
+        {
+            type: "input",
+            align: "left",
+            input: {type: "buttons", buttons: ["Yes", "No"]},
+            delay: 1900
+        },
+        {
+            type: "text",
+            align: "left",
+            msg: "Would you like to manage your retirement accounts actively or passively?",
+            delay: 1800,
         },
         {
             type: "input",
@@ -50,14 +74,47 @@
         {
             type: "text",
             align: "left",
-            msg: "Done",
+            msg: "Would you like to invest in individual equities?",
             delay: 1800,
-        }
+        },
+        {
+            type: "input",
+            align: "left",
+            input: {type: "buttons", buttons: ["Yes", "No"]},
+            delay: 1900
+        },
+        {
+            type: "text",
+            align: "left",
+            msg: "How many trades have you done in the last 6 months?",
+            delay: 1800,
+        },
+        {
+            type: "input",
+            align: "left",
+            input: {type: "buttons", buttons: ["None", "Less than 10", "1/Week", "1/Day"]},
+            delay: 1900
+        },
+        {
+            type: "text",
+            align: "left",
+            msg: "How important is it for you to have a single account to manage in your retirement?",
+            delay: 1800,
+        },
+        {
+            type: "input",
+            align: "left",
+            input: {type: "buttons", buttons: ["1", "2", "3", "4", "5"]},
+            delay: 1900
+        },
     ];
     var currentMessage = 0;
     const chatBox = document.getElementsByClassName('chat');
     const chatMessageList = document.getElementById('message-list');
     const chatMessageListNonRemovableCount = chatMessageList.childNodes.length;
+
+    console.log($('.chat-message-list'))
+    console.log(chatMessageList)
 
     function updateScroll() {
         chatBox[0].offsetHeight += 200;
@@ -114,7 +171,7 @@
     }
 
     function resumePlaybackWithDelay() {
-        setTimeout(processCurrentMessage, 100);
+        setTimeout(processCurrentMessage, 600);
     }
 
     function processCurrentMessage() {
