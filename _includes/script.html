@@ -7,7 +7,8 @@
 </script>
 
 <script>
-    var chatMessages = [
+    const debugAccelerator = 1; // switch to 1
+    const chatMessages = [
         {
             name: "ms1",
             type: "text",
@@ -34,8 +35,6 @@
             align: "left",
             input: {type: "buttons", buttons: ["Yes", "No"]},
             // delay: 1800,
-            msgYes: "Yes",
-            msgNo: "No"
         },
         {
             type: "text",
@@ -46,8 +45,6 @@
             type: "input",
             align: "left",
             input: {type: "buttons", buttons: ["Actively", "Passively"]},
-            msgYes: "Actively",
-            msgNo: "Passively",
             delay: 1900
         },
         {
@@ -55,79 +52,12 @@
             align: "left",
             msg: "Done",
             delay: 1800,
-        },
-        // {
-        //     type: "text",
-        //     align: "left",
-        //     msg: "Lets create an account so you can sign in and check your status anytime.",
-        //     msgYes: this.msg,
-        //     delay: 1800,
-        // },
-        // {
-        //     type: "text",
-        //     align: "left",
-        //     msg: "What is your email?",
-        //     delay: 1800,
-        // },
-        // {
-        //     type: "input",
-        //     align: "left",
-        //     input: {type: "text"}
-        // }
+        }
     ];
     var currentMessage = 0;
-    var chatDelay = 0;
     const chatBox = document.getElementsByClassName('chat');
-    const chat = $('.chat');
-    const henry = $('.henry');
-    const henryMsg = $('.message-left');
-    const henryMsg2 = document.getElementsByClassName('message-left');
-    const response = document.querySelector('message-right');
-
-    const ul = document.querySelector('chat-message-list');
-    const li = $('.message-right');
-
-    // console.log(chatBox, chatBox[0].offsetHeight)
-
-
-    // for (let i=0; i <= li.length; i++) {
-    //     response.onclick = editResponse;
-    // }
-    // function editResponse() {
-    //     console.log("clicked")
-    // }
-
-    //TODO
-    /*
-    * animationend event use js to add other animation
-    * remove dot elements -at setInterval?
-    * append text
-    * */
-
-    function editResponse() {
-        // select the response msg
-        if($('.message-right')) {
-            $('.message-right').each(function( index ) {
-                // console.log( index + ": " + $( this ).text() );
-                console.log(this)
-                this.onclick = function(){
-                    //modal
-                    alert("Are you sure you want to change?");
-
-                    //select following elements after clicked element
-                    $('.message-right').nextAll().css( "background-color", "red" );
-                    $('.message-right').nextAll().delete();
-
-                    // delete all following elements
-
-                    // render yes/no btns
-
-                }
-            })
-        }
-    }
-
-
+    const chatMessageList = document.getElementById('message-list');
+    const chatMessageListNonRemovableCount = chatMessageList.childNodes.length;
 
     function updateScroll() {
         chatBox[0].offsetHeight += 200;
@@ -137,9 +67,12 @@
     }
     // setInterval(updateScroll, 300);
 
-
-    function postMessage(alignment, text) {
-        $(".chat-message-list").append("<li class='message-" + alignment + "'>" + text + "</li>");
+    function postMessage(alignment, text, onclick) {
+        const bubble = document.createElement("li");
+        bubble.className = 'message-' + alignment;
+        bubble.innerText = text;
+        bubble.onclick = onclick;
+        chatMessageList.appendChild(bubble);
         updateScroll();
     }
 
@@ -147,24 +80,41 @@
         $(".chat-message-list").append("<input type='text' class='input' placeholder='Type Something..'>");
         updateScroll();
     }
-    function showInputButtons(button_names) {
-        $(".chat-message-list").append("<div class='btn-container'>" + "<button class='btn' id='yes'>" + button_names[0] + "</button>" + "<button class='btn' id='no'>" + button_names[1] + "</button>" + "</div>");
-        updateScroll();
+    function showInputButtons(button_names) { //param refers to btn array
+        const buttonContainer = document.createElement("div");
+        buttonContainer.className = 'btn-container';
+
+        const indexToReplayFrom = currentMessage-1;
+
+        for (let i = 0; i < button_names.length; i++) {
+            const button = document.createElement("button");
+            button.className = 'btn';
+            button.innerText = button_names[i];
+            button.onclick = () => {
+                postMessage("right", button_names[i], () => {
+                    replayFrom(indexToReplayFrom);
+                });
+                chatMessageList.removeChild(buttonContainer);
+                updateScroll();
+                resumePlaybackWithDelay();
+            };
+
+            buttonContainer.appendChild(button);
+        }
+        chatMessageList.appendChild(buttonContainer);
     }
-    function displayBtnResponse(msgYes, msgNo, id) {
-        $(':button').click(function () {
-            if (this.id === 'yes') {
-                postMessage("right", msgYes);
-                setTimeout(processCurrentMessage, 600);
-                editResponse();
-            }
-            else if (this.id === 'no') {
-                postMessage("right", msgNo);
-                setTimeout(processCurrentMessage, 600);
-                editResponse();
-            }
-            $(':button').remove();
-        });
+
+    function replayFrom(messageIndex) {
+        while (chatMessageList.childNodes.length > chatMessageListNonRemovableCount + messageIndex) {
+            chatMessageList.removeChild(chatMessageList.lastChild);
+        }
+
+        currentMessage = messageIndex;
+        processCurrentMessage();
+    }
+
+    function resumePlaybackWithDelay() {
+        setTimeout(processCurrentMessage, 100);
     }
 
     function processCurrentMessage() {
@@ -178,7 +128,7 @@
             case "text":
                 postMessage(msg.align, msg.msg);
                 // setup a timer which will call processCurrentMessage() after a delay message.delay
-                setTimeout(processCurrentMessage, msg.delay);
+                setTimeout(processCurrentMessage, msg.delay/debugAccelerator);
                 break;
             case "input":
                 switch (msg.input.type) {
@@ -187,7 +137,6 @@
                         break;
                     case "buttons":
                         showInputButtons(msg.input.buttons);
-                        displayBtnResponse(msg.msgYes, msg.msgNo);
                         break;
                 }
                 // do nothing, wait for the user to input/respond. when they do (on button click) call processCurrentMessage();
