@@ -88,3 +88,26 @@
   width: 80%;
   margin: 3rem auto;
 }
+
+.blue-text {
+  font-family: $inter-bold;
+  font-weight: bold;
+  color: $blue;
+  font-size: 1.6rem;
+  margin-bottom: 3rem;
+  align-self: flex-start;
+  text-align: left;
+}
+
+.price {
+  font-family: $inter-bold;
+  font-weight: bold;
+  font-size: 3rem;
+  color: #000;
+  margin-bottom: 1rem;
+  align-self: flex-start;
+
+  &--sm {
+    font-size: 2rem;
+  }
+}
