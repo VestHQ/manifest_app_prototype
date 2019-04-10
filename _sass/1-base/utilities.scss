@@ -75,5 +75,16 @@
 }
 
 .text-center {
-  text-align: center;
+  text-align: center !important;
+}
+
+.text-wrap {
+  margin-left: 1.7rem;
+}
+
+.mg-top-sm {margin-top: 2rem !important;}
+
+.option-final-text {
+  width: 70% !important;
+  margin: 1rem auto !important;
 }
