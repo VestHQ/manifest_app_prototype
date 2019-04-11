@@ -74,6 +74,18 @@
   }
 }
 
+.btn-grey-2 {
+  color: $blue;
+  background: $light-grey-2;
+}
+
+.btn-sm {
+  padding: 1rem 1.2rem;
+  width: 35%;
+  margin: 0 auto;
+  display: flex;
+}
+
 .button-col {
   display: flex;
   flex-direction: column;

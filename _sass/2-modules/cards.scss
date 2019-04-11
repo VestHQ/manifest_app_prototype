@@ -27,3 +27,20 @@
     width: 16rem;
   }
 }
+
+.card-transfer {
+  width: 75%;
+  height: 16rem;
+  background: darken($light-grey-2, 10%);
+  border-radius: 1rem;
+  margin: 1rem auto;
+
+  &__text {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #000;
+    margin: 2rem;
+    line-height: 1.7;
+    text-align: center;
+  }
+}

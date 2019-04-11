@@ -101,6 +101,7 @@
             type: "input",
             align: "left",
             input: {type: "buttons", buttons: ["1", "2", "3", "4", "5"]},
+            id: "/5",
             delay: 1900
         },
         {
@@ -152,6 +153,9 @@
         const indexToReplayFrom = currentMessage-1;
 
         for (let i = 0; i < button_names.length; i++) {
+            const linkOut =  document.createElement("a");
+            linkOut.href = "{{ site.baseurl }}/ira";
+
             const button = document.createElement("button");
             button.className = 'btn';
             button.innerText = button_names[i];
@@ -162,11 +166,18 @@
                 chatMessageList.removeChild(buttonContainer);
                 updateScroll();
                 resumePlaybackWithDelay();
-            };
 
-            if(button_names[i] > 2) {
-                console.log("lots of btns dude")
-            }
+                if(button_names[i].id === "/5") {
+                    console.log("hit");
+                    button.innerText = button_names[i] + button_names[i].id;
+                }
+                if(i === button_names.length){
+                    alert("last btn")
+                    button.onclick = () => {
+                        alert("last btn")
+                    }
+                }
+            };
 
             buttonContainer.appendChild(button);
         }
@@ -188,6 +199,7 @@
 
     function processCurrentMessage() {
         if (currentMessage >= chatMessages.length) {
+            window.location = "{{ site.baseurl }}/ira"; //exit to next page on last msg
             return;
         }
 
