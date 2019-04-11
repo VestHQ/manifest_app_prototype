@@ -36,3 +36,25 @@ $phone-width: 37rem;
 $silver: #E0E0E0;
 
 $grey: #A3ABB5;
+
+.x {
+  &::after {
+    content: "\2715";
+    font-size: 2.2rem;
+    color: #545454;
+    position: absolute;
+    right: 2rem;
+    top: -5px;
+  }
+}
+
+.backArrow {
+  &::before {
+    content: "←";
+    font-size: 2.6rem;
+    color: #545454;
+    position: absolute;
+    left: 2rem;
+    top: -3px;
+  }
+}
