@@ -63,6 +63,17 @@
   color: $tiaa-blue;
 }
 
+.btm-fixed {
+  position: absolute;
+  bottom: 2rem;
+  right: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+
+  &--2 {
+    bottom: -2.7rem;
+  }
+}
+
 .button-col {
   display: flex;
   flex-direction: column;
@@ -83,6 +94,11 @@
 .radio-row {
   position: relative;
   margin-bottom: 4rem;
+
+  &--2 {
+    display: flex;
+    margin-bottom: 1rem;
+  }
 }
 
 .radio-label {
@@ -93,6 +109,11 @@
 
 .radio-input {
 
+
+  &--left {
+    left: 3rem;
+    top: 0; // both need to match .radio-img to select radio
+  }
 }
 
 .radio-img {
@@ -101,6 +122,11 @@
   width: 2rem;
   position: absolute;
   right: 3rem;
+
+  &--left {
+    left: 2rem;
+    top: 0;
+  }
 }
 
 [type=radio] {
@@ -117,6 +143,9 @@
   content: url("../../assets/img/check_small.png");
 }
 
+.checked {
+  content: url("../../assets/img/check_small.png") !important;
+}
 
 
 

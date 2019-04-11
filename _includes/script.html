@@ -7,7 +7,7 @@
 </script>
 
 <script>
-    const debugAccelerator = 1; // switch to 1
+    const debugAccelerator = 10; // switch to 1
     const chatMessages = [
         {
             type: "text",
@@ -103,6 +103,18 @@
             input: {type: "buttons", buttons: ["1", "2", "3", "4", "5"]},
             delay: 1900
         },
+        {
+            type: "text",
+            align: "left",
+            msg: "I have a suggestion for your destination account. Would you like to see it?",
+            delay: 1800,
+        },
+        {
+            type: "input",
+            align: "left",
+            input: {type: "buttons", buttons: ["Show Me"]},
+            delay: 1900
+        }
     ];
     var currentMessage = 0;
     const chatBox = document.getElementsByClassName('chat');
@@ -152,6 +164,10 @@
                 resumePlaybackWithDelay();
             };
 
+            if(button_names[i] > 2) {
+                console.log("lots of btns dude")
+            }
+
             buttonContainer.appendChild(button);
         }
         chatMessageList.appendChild(buttonContainer);
@@ -190,6 +206,7 @@
                         break;
                     case "buttons":
                         showInputButtons(msg.input.buttons);
+                        updateScroll();
                         break;
                 }
                 // do nothing, wait for the user to input/respond. when they do (on button click) call processCurrentMessage();

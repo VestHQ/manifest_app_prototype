@@ -18,7 +18,7 @@
     @media (max-width: 25em) { @content } //320px
   }
   @if $breakpoint == isPhone {
-    @media (max-width: 500px) { @content } //500px
+    @media (max-width: 400px) { @content } //500px
   }
   @if $breakpoint == mid-phone {
     @media (max-width: 31.25em) { @content } //500px

@@ -9,54 +9,68 @@
     <h1 class="heading heading--blue u-mg-mid">Requirements</h1>
 
     <ul class="list">
-        <li class="item">
-            <i onclick="toggleClass(this)" class="fas fa-check-circle unchecked"></i>
-            You have to have worked at this company (company name)
+
+        <li class="radio-row radio-row--2">
+            <label for="selection1" class="item"> You have to have worked at this company (company name)
+                <input type="radio" name="selection1" onclick="onCheck(this)" class="radio-input radio-input--left">
+                <span class="radio-img radio-img--left"></span>
+            </label>
         </li>
-        <li class="item">
-            <i onclick="toggleClass(this)" class="fas fa-check-circle unchecked"></i>
-            You have to be terminated from this company (company name)
+
+        <li class="radio-row radio-row--2">
+            <label for="selection2" class="item"> You have to be terminated from this company (company name)
+                <input type="radio" name="selection2" onclick="onCheck(this)" class="radio-input radio-input--left">
+                <span class="radio-img radio-img--left"></span>
+            </label>
         </li>
-        <li class="item">
-            <i onclick="toggleClass(this)" class="fas fa-check-circle unchecked"></i>
-            You must have 401(k) balance in order to make the transfer
+
+        <li class="radio-row radio-row--2">
+            <label for="selection3" class="item"> You must have 401(k) balance in order to make the transfer
+                <input type="radio" name="selection3" onclick="onCheck(this)" class="radio-input radio-input--left">
+                <span class="radio-img radio-img--left"></span>
+            </label>
         </li>
-        <li class="item">
-            <i onclick="toggleClass(this)" class="fas fa-check-circle unchecked"></i>
-            You would like to transfer/rollover your 401(k) or want to learn about your options to rollover/transfer
+
+        <li class="radio-row radio-row--2">
+            <label for="selection4" class="item"> You would like to transfer/rollover your 401(k) or want to learn about your options to rollover/transfer
+                <input type="radio" name="selection4" onclick="onCheck(this)" class="radio-input radio-input--left">
+                <span class="radio-img radio-img--left"></span>
+            </label>
         </li>
     </ul>
 
-    <a href="{{ site.baseurl }}/create_account" class="btn-large btm-fixed">Save &nbsp; &nbsp; &rarr;</a>
+    <a id="addLink" class="btn-large btm-fixed btn--disabled">Save &nbsp; &nbsp; &rarr;</a>
 </div>
 
 <script>
+    function onCheck(choice) {
+        console.log('clicked')
+        // choice.classList.toggle('checked');
+        const button = document.getElementById('addLink');
+        if(choice){
+            button.classList.remove("btn--disabled");
+            button.classList.add("btn");
+            button.href = choice.value;
+        }
+    }
+
 
     function toggleClass(x) {
         x.classList.toggle('checked');
+        console.log(x)
     }
-
-    //    onclick="this.src.endsWith(unchecked)? checked : unchecked;"
 
     const list = document.querySelector('.list');
     const items = list.getElementsByTagName("li");
 
+    // console.log(list.childNodes)
+
+    for(let i=0; i < list.length; i++){
+        console.log(list[i])
+    }
+
+
     const unchecked = "{{ site.baseurl }}/assets/img/silver-check.png";
     const checked = "{{ site.baseurl }}/assets/img/check_small.png";
 
-    function toggleCheck(e) {
-        // for (let i = 0; i < items.length; ++i) {
-        //     console.log(items[i].firstElementChild)
-        //     if (items[i].firstElementChild.src === checked) {
-        //         items[i].firstElementChild.src = unchecked;
-        //         console.log("unchecked")
-        //     }
-        //     else {
-        //         items[i].firstElementChild.src = checked;
-        //         console.log("checked")
-        //     }
-        // }
-
-        e.classList.toggle("{{ site.baseurl }}/assets/img/check_small.png")
-    }
 </script>
