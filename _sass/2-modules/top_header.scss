@@ -43,6 +43,26 @@
       @extend .line;
       background: $light-grey-2;
     }
+
+    &--20 {
+      background: linear-gradient(to right, #4e78f6 20%,$blue 20%,$blue 20%,$light-grey-2 20%,$light-grey-2 20%);
+    }
+    &--25 {
+      background: linear-gradient(to right, #4e78f6 25%,$blue 25%,$blue 25%,$light-grey-2 25%,$light-grey-2 25%);
+    }
+    &--40 {
+      background: linear-gradient(to right, #4e78f6 40%,$blue 40%,$blue 40%,$light-grey-2 40%,$light-grey-2 40%);
+    }
+    &--50 {
+      background: linear-gradient(to right, #4e78f6 50%,$blue 10%,$blue 10%,$light-grey-2 10%,$light-grey-2 10%);
+    }
+    &--90 {
+      background: linear-gradient(to right, #4e78f6 90%,$blue 10%,$blue 10%,$light-grey-2 10%,$light-grey-2 10%);
+    }
+    &--full {
+      @extend .line;
+      background: $blue;
+    }
   }
 }
 
