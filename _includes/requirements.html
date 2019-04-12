@@ -2,7 +2,7 @@
 
 <div class="chat welcome">
  <div class="top">
-     <h3 class="manifest"><a class="backArrow" href="{{ site.baseurl }}/prepare"></a>Manifest</h3>
+     <h3 class="manifest"><a class="backArrow" onclick="goBack()"></a>Manifest</h3>
      <div class="line--2"></div>
  </div>
 
@@ -42,17 +42,37 @@
     <a class="btn-large btm-fixed" href="{{ site.baseurl }}/create_account">Save &nbsp; &nbsp; &rarr;</a>
 </div>
 
+<script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous">
+</script>
+<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js" integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E=" crossorigin="anonymous">
+</script>
+
 <script>
-    function onCheck(choice) {
-        console.log('clicked')
+
+    function onCheck(choice){
+        $('input[type="checkbox"]').click(function(){
+            if($(this).prop("checked") === true){
+                alert("Checkbox is checked.");
+            }
+            else if($(this).prop("checked") === false){
+                alert("Checkbox is unchecked.");
+            }
+        });
+    };
+
+    // function onCheck(choice) {
+    //     console.log('clicked')
         // choice.classList.toggle('checked');
-        const button = document.getElementById('addLink');
-        if(choice){
-            button.classList.remove("btn--disabled");
-            button.classList.add("btn");
-            button.href = choice.value;
-        }
-    }
+        // const button = document.getElementById('addLink');
+        // if(choice){
+        //     button.classList.remove("btn--disabled");
+        //     button.classList.add("btn");
+        //     button.href = choice.value;
+        // }
+    // }
 
 
     function toggleClass(x) {

@@ -20,13 +20,13 @@
     border-bottom: 1px solid #fff;
     position: relative;
 
-    &::after {
-      content: "\2715";
-      color: #fff;
-      position: absolute;
-      font-size: 2.5rem;
-      right: 2rem; top: -.5rem;
-    }
+    //&::after {
+    //  content: "\2715";
+    //  color: #fff;
+    //  position: absolute;
+    //  font-size: 2.5rem;
+    //  right: 2rem; top: -.5rem;
+    //}
   }
 
   .verify-code {
