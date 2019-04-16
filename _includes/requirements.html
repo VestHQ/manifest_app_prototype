@@ -8,38 +8,38 @@
 
     <h1 class="heading heading--blue u-mg-mid">Requirements</h1>
 
-    <ul class="list">
+    <ul class="list" id="list">
 
         <li class="radio-row radio-row--2">
             <label for="selection1" class="item"> You have to have worked at this company (company name)
-                <input type="radio" name="selection1" onclick="onCheck(this)" class="radio-input radio-input--left">
+                <input id="selection1" type="radio" name="selection1"  class="radio-input radio-input--left" onclick="addToCheckedArr(this)">
                 <span class="radio-img radio-img--left"></span>
             </label>
         </li>
 
         <li class="radio-row radio-row--2">
             <label for="selection2" class="item"> You have to be terminated from this company (company name)
-                <input type="radio" name="selection2" onclick="onCheck(this)" class="radio-input radio-input--left">
+                <input id="selection2" type="radio" name="selection2" class="radio-input radio-input--left" onclick="addToCheckedArr(this)">
                 <span class="radio-img radio-img--left"></span>
             </label>
         </li>
 
         <li class="radio-row radio-row--2">
             <label for="selection3" class="item"> You must have 401(k) balance in order to make the transfer
-                <input type="radio" name="selection3" onclick="onCheck(this)" class="radio-input radio-input--left">
+                <input id="selection3" type="radio" name="selection3" class="radio-input radio-input--left" onclick="addToCheckedArr(this)">
                 <span class="radio-img radio-img--left"></span>
             </label>
         </li>
 
         <li class="radio-row radio-row--2">
             <label for="selection4" class="item"> You would like to transfer/rollover your 401(k) or want to learn about your options to rollover/transfer
-                <input type="radio" name="selection4" onclick="onCheck(this)" class="radio-input radio-input--left">
+                <input id="selection4" type="radio" name="selection4" class="radio-input radio-input--left" onclick="addToCheckedArr(this)">
                 <span class="radio-img radio-img--left"></span>
             </label>
         </li>
     </ul>
 
-    <a class="btn-large btm-fixed" href="{{ site.baseurl }}/create_account">Save &nbsp; &nbsp; &rarr;</a>
+    <a class="btn-large btm-fixed" id="btn" onclick="allCheckedAddLink()">Save &nbsp; &nbsp; &rarr;</a>
 </div>
 
 <script
@@ -52,16 +52,24 @@
 
 <script>
 
-    function onCheck(choice){
-        $('input[type="checkbox"]').click(function(){
-            if($(this).prop("checked") === true){
-                alert("Checkbox is checked.");
-            }
-            else if($(this).prop("checked") === false){
-                alert("Checkbox is unchecked.");
-            }
-        });
-    };
+    const list = document.getElementById('list');
+    const btn = document.getElementById('btn');
+    const allCheckedInputs = [];
+
+    function addToCheckedArr(e){
+        if(e.checked){
+            allCheckedInputs.push(e)
+        }
+    }
+
+    function allCheckedAddLink() {
+        if(allCheckedInputs.length === 4) {
+            console.log('all checked');
+            btn.href = "{{site.baseurl}}/create_account/"
+        } else {
+            btn.href = "{{site.baseurl}}/sorry/"
+        }
+    }
 
     // function onCheck(choice) {
     //     console.log('clicked')
@@ -79,18 +87,5 @@
         x.classList.toggle('checked');
         console.log(x)
     }
-
-    const list = document.querySelector('.list');
-    const items = list.getElementsByTagName("li");
-
-    // console.log(list.childNodes)
-
-    for(let i=0; i < list.length; i++){
-        console.log(list[i])
-    }
-
-
-    const unchecked = "{{ site.baseurl }}/assets/img/silver-check.png";
-    const checked = "{{ site.baseurl }}/assets/img/check_small.png";
 
 </script>

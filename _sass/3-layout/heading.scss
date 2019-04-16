@@ -45,6 +45,13 @@
     margin: 1.5rem auto;
     line-height: 1.4;
   }
+
+  &--grey-md {
+    color: $dark-grey;
+    font-size: 2.4rem;
+    width: 80%;
+    margin: 2rem auto;
+  }
 }
 .text {
   text-decoration: none;
