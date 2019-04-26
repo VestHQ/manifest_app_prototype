@@ -90,6 +90,14 @@
   margin: 1rem auto !important;
 }
 
+.btm {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%; right: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
 .u-btm-none {
   bottom: 0 !important;
 }

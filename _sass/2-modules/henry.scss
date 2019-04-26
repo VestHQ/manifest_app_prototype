@@ -1,10 +1,10 @@
 .chat {
-  @include absCenter;
+  //@include absCenter;
   background-color: $background-grey-2;
   height: $phone-height;
   width: $phone-width;
-  overflow-y: auto;
   overflow-x: hidden;
+  position: relative;
 
   @include respond(isPhone){
     width: 100vw;

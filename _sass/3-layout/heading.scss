@@ -59,7 +59,7 @@
   color: lighten($dark-grey, 12%);
   font-weight: 600;
   font-size: 1.7rem;
-  padding: 3rem;
+  padding: 2rem 3rem;
   line-height: 1.4;
 
   &--grey {
@@ -77,9 +77,10 @@
   }
   &--blue-large {
     color: $blue;
-    text-align: center;
-    font-weight: 600;
-    font-size: 1.5rem;
+    font-weight: 800;
+    font-size: 1.6rem;
+    text-align: left;
+    padding: 0 3rem;
   }
 
   &--white {
