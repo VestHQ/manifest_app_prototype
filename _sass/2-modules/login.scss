@@ -2,7 +2,6 @@
   font-family: $avenir;
   display: flex;
   flex-direction: column;
-  //justify-content: center;
 }
 
 .placeholder {
@@ -32,17 +31,21 @@
 }
 
 .list {
-  display: list-item;
   position: relative;
+  left: 5%;
+  width: 90%;
+  border-radius: 3px;
+  padding: 1rem 0 1rem 2rem;
 
   .item {
     font-size: 1.7rem;
-    padding: 0 15%;
-    margin-bottom: 2rem;
+
+    //margin-bottom: 2rem;
     position: relative;
     cursor: pointer;
 
-    min-width:27rem;
+    width: 88%;
+    min-width: 27rem;
 
     &__img {
       width: 1.8rem;

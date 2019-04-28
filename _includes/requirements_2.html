@@ -1,10 +1,10 @@
 
 
 <div class="chat welcome">
- <div class="top">
-     <h3 class="manifest"><a class="backArrow" onclick="goBack()"></a>Manifest</h3>
-     <div class="line--2"></div>
- </div>
+    <div class="top">
+        <h3 class="manifest"><a class="backArrow" onclick="goBack()"></a>Manifest</h3>
+        <div class="line--2"></div>
+    </div>
 
     <h1 class="heading u-mg-mid">Qualification <span class="heading--blue">Checklist</span></h1>
 
@@ -12,22 +12,15 @@
     <ul class="list" id="list">
 
         <li class="radio-row radio-row--2">
-            <label for="selection1" class="item">I am a current employee of University of Chicago
-                <input id="selection1" type="radio" name="selection1"  class="radio-input" onclick="onCheck(this)" value="{{ site.baseurl }}/requirements_2">
+            <label for="selection1" class="item">I have a TIAA 403(b) account
+                <input id="selection1" type="radio" name="selection1"  class="radio-input" onclick="onCheck(this)" value="{{ site.baseurl }}/create_account">
                 <span class="radio-img"></span>
             </label>
         </li>
 
         <li class="radio-row radio-row--2">
-            <label for="selection2" class="item">I am a former employee of University of Chicago
-                <input id="selection2" type="radio" name="selection2" class="radio-input" onclick="onCheck(this)" value="{{ site.baseurl }}/requirements_2">
-                <span class="radio-img"></span>
-            </label>
-        </li>
-
-        <li class="radio-row radio-row--2">
-            <label for="selection3" class="item">I have never been employed by University of Chicago
-                <input id="selection3" type="radio" name="selection3" class="radio-input" onclick="onCheck(this)" value="{{ site.baseurl }}/requirements_3">
+            <label for="selection2" class="item">A previous 401(k) or 403(b) or 457 or TSP account
+                <input id="selection2" type="radio" name="selection2" class="radio-input" onclick="onCheck(this)" value="{{ site.baseurl }}/create_account">
                 <span class="radio-img"></span>
             </label>
         </li>

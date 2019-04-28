@@ -106,6 +106,8 @@
 .radio-row {
   position: relative;
   margin-bottom: 4rem;
+  background: #fff;
+  padding: 2rem;
 
   &--2 {
     display: flex;
@@ -114,7 +116,7 @@
 }
 
 .radio-label {
-  font-size: 1.8rem;
+  font-size: 1.7rem;
   font-weight: 700;
   margin-left: 3rem;
 }
@@ -130,10 +132,11 @@
 
 .radio-img {
   content: url("../../assets/img/silver-check.png");
-  height: 2rem;
-  width: 2rem;
+  height: 2.4rem;
+  width: 2.4rem;
   position: absolute;
-  right: 3rem;
+  right: -3rem;
+  top: .9rem;
 
   &--left {
     left: 2rem;
@@ -142,11 +145,12 @@
 }
 
 [type=radio] {
+  height: 2.4rem;
+  width: 2.4rem;
   position: absolute;
-  right: 3rem;
+  right: -3rem;
+  top: .9rem;
   opacity: 0;
-  height: 2rem;
-  width: 2rem;
   z-index: 2;
   cursor: pointer;
 }
