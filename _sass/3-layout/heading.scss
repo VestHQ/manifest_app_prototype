@@ -32,7 +32,7 @@
     text-align: left;
   }
   &--grey {
-    color: lighten($dark-grey, 20%);
+    color: $dark-grey;
     font-size: 1.6rem;
     font-weight: 800;
     margin: 0 5% 4rem 8%;
@@ -76,6 +76,7 @@
     text-align: center;
   }
   &--blue-large {
+    font-family: $inter-bold;
     color: $blue;
     font-weight: 800;
     font-size: 1.6rem;
