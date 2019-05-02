@@ -4,11 +4,27 @@
         <div class="line--2"></div>
     </div>
 
-    <h1 class="heading heading--secondary">How would you like to receive your <span class="heading--blue">verification code</span>?</h1>
+    <h1 class="heading--dark">How would you like to receive your verification code?</h1>
+
+    <ul class="list" id="list">
+
+        <li class="radio-row radio-row--2">
+            <label for="selection1" class="item">Email it to me
+                <input id="selection1" type="radio" name="selection1"  class="radio-input" onclick="onCheck(this)" value="{{ site.baseurl }}/requirements_2">
+                <span class="radio-img"></span>
+            </label>
+        </li>
+
+        <li class="radio-row radio-row--2">
+            <label for="selection2" class="item">SMS me
+                <input id="selection2" type="radio" name="selection2" class="radio-input" onclick="onCheck(this)" value="{{ site.baseurl }}/requirements_3">
+                <span class="radio-img"></span>
+            </label>
+        </li>
+    </ul>
 
     <div class="flex btm-fixed btm-fixed--2">
-        <a href="{{ site.baseurl }}/verify_code" class="btn-large">Email Me</a>
-        <a href="{{ site.baseurl }}/verify_code" class="btn-large">SMS Me</a>
+        <a href="{{ site.baseurl }}/verify_code" class="btn-large">Continue</a>
     </div>
 
 </div>

@@ -1,28 +1,28 @@
 <div class="chat welcome">
     <div class="top">
         <h3 class="manifest"><a class="backArrow" onclick="goBack()"></a>Manifest</h3>
-        <div class="line"></div>
+        <div class="line--2"></div>
     </div>
 
-    <h1 class="heading heading--top mg-btm-mid">Do you know where you want to <span class="heading--blue">transfer your TIAA account?</span></h1>
+    <h1 class="text--black mg-btm-mid">Do you have any open loans in your University of Chicago TIAA retirement account?</h1>
 
-    <ul class="col" id="list">
-        <li class="radio-row">
-            <label for="selection" class="radio-label"> No, I don't
-                <input type="radio" name="selection" value="{{ site.baseurl }}/dont_worry" onclick="onCheck(this)" class="radio-input">
+    <ul class="list" id="list">
 
+        <li class="radio-row radio-row--2">
+            <label for="selection1" class="item">Yes, I do
+                <input id="selection1" type="radio" name="selection1"  class="radio-input" onclick="onCheck(this)" value="{{ site.baseurl }}/close_loans">
                 <span class="radio-img"></span>
             </label>
         </li>
-        <li class="radio-row">
-            <label for="selection" class="radio-label"> Yes, I do
-                <input type="radio" name="selection" value="{{ site.baseurl }}/link_account_from_yes" onclick="onCheck(this)" class="radio-input">
 
+        <li class="radio-row radio-row--2">
+            <label for="selection2" class="item">No, I don't
+                <input id="selection2" type="radio" name="selection2" class="radio-input" onclick="onCheck(this)" value="{{ site.baseurl }}/requirements_3">
                 <span class="radio-img"></span>
             </label>
         </li>
     </ul>
 
-    <a id="addLink" class="btn--disabled btm-fixed">Continue</a>
+    <a id="addLink" class="btn-large btm-fixed">Continue</a>
 
 </div>

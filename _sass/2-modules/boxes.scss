@@ -1,0 +1,35 @@
+.box {
+  background: #fff;
+  border-radius: .5rem;
+  box-shadow: $box-shadow;
+  height: 9rem;
+  width: 90%;
+  margin: 2rem auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__img {
+    width: 8rem;
+    height: 4.5rem;
+    border-radius: 50%;
+    background: $light-grey;
+    margin: 1.5rem;
+  }
+
+  &__text {
+    font-family: $inter-bold;
+    font-weight: bold;
+    font-size: 1.7rem;
+    color: #000;
+  }
+}
+
+.text--home {
+  font-family: $inter-bold;
+  font-weight: bold;
+  font-size: 2rem;
+  color: #000;
+  margin-left: 2rem;
+}
