@@ -1,0 +1,30 @@
+<div class="chat welcome">
+    <div class="top">
+        <h3 class="manifest"><a class="backArrow" onclick="goBack()"></a>Manifest</h3>
+        <div class="line--2"></div>
+    </div>
+
+    <h1 class="text--black">Thank you for linking your TIAA account, have you made a decision on where you want to move this account?</h1>
+
+    <p class="note-text mg-btm-mid"><span class="text--blue">Note: </span>If you need to change the answer in the future, you can. Regardless of your answer to this question Manifest will be able to help you move your account.</p>
+
+    <ul class="list" id="list">
+
+        <li class="radio-row radio-row--2">
+            <label for="selection1" class="item">Yes, I do
+                <input id="selection1" type="radio" name="selection1"  class="radio-input" onclick="onCheck(this)" value="{{ site.baseurl }}/destination_account">
+                <span class="radio-img"></span>
+            </label>
+        </li>
+
+        <li class="radio-row radio-row--2">
+            <label for="selection2" class="item">No, help me decide
+                <input id="selection2" type="radio" name="selection2" class="radio-input" onclick="onCheck(this)" value="{{ site.baseurl }}/dont_worry">
+                <span class="radio-img"></span>
+            </label>
+        </li>
+    </ul>
+
+    <a id="addLink" class="btn-large btm-fixed">Continue</a>
+
+</div>
