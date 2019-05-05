@@ -52,3 +52,28 @@
     align-self: stretch;
   }
 }
+
+.money {
+  font-family: $inter-bold;
+  color: $dark-grey-2;
+  font-size: 1.8rem;
+  display: flex;
+  justify-content: space-between;
+  width: 85%;
+  margin: 1rem auto;
+
+  &__co {
+
+  }
+
+  &__dollar {
+
+  }
+  &__visa {
+    color: $dark-grey;
+    font-size: 1.4rem;
+
+    width: 85%;
+    margin: 0 auto;
+  }
+}

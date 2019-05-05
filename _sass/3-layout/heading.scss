@@ -108,6 +108,13 @@
     padding: 0;
   }
 
+  &--highlight {
+    background-color: $light-blue;
+    text-decoration: none;
+    padding: 4px 3px;
+    color: $dark-grey-2;
+  }
+
   &--black {
     padding: 1.5rem;
     font-family: $inter-bold;
@@ -172,3 +179,42 @@
   color: $dark-grey-2;
   padding: 1.5rem;
 }
+
+
+
+.blue-heading {
+  display: flex;
+  align-items: center;
+  background-color: $light-blue;
+  padding: .8rem 0;
+  width: 90%;
+  margin: 1.5rem auto;
+  border-radius: 3px;
+
+  &__img {
+    margin: 0 1.5rem;
+  }
+
+  &__text {
+    color: $blue;
+    font-family: $inter-bold;
+    font-weight: bold;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
