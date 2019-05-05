@@ -143,6 +143,19 @@
     left: 2rem;
     top: 0;
   }
+
+  &--caution {
+    content: url("../../assets/img/caution.png");
+    top: -.4rem;
+    right: -8rem;
+
+    &--sm {
+      right: 3rem;
+      top: 18.6rem;
+      height: 2rem;
+      width: 2rem;
+    }
+  }
 }
 
 [type=radio] {
@@ -185,7 +198,79 @@
   }
 }
 
+.unchecked {
+  font-size: 1.8rem;
+  color: $silver;
+  cursor: pointer;
+  margin-right: 1rem;
+  position: absolute;
+  top: 1rem;
+  left: 3rem;
 
+  //&--right {
+  //  @extend .unchecked;
+  //  top: 0;
+  //  right: 1rem;
+  //}
+}
+
+.checked {
+  @extend .unchecked;
+  color: $blue;
+}
+
+.blue-check {
+  color: $blue;
+
+  font-size: 1.4rem;
+  position: absolute;
+  right: 3.5rem;
+
+  &--large {
+    font-size: 2rem;
+    top: 3rem;
+  }
+
+  &--first {
+    top: 1.5rem;
+    font-size: 2rem;
+  }
+}
+
+.unchecked-right {
+  font-size: 1.8rem;
+  color: $silver;
+  cursor: pointer;
+  margin-right: 1rem;
+  position: absolute;
+  top: 0;
+  right: 1rem;
+}
+
+.checked-right {
+  @extend .unchecked-right;
+  color: $blue;
+}
+
+.line--2 {
+  width: 100%;
+  background: $grey;
+  height: 1px !important;
+}
+
+.circle-number {
+  display: inline-block;
+  text-align: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: $blue;
+  color: #fff;
+  font-size: 1.8rem;
+  padding: 3px 2px 0 1px;
+  margin-right: 2rem;
+  margin-left: -3rem;
+}
 
 
 
