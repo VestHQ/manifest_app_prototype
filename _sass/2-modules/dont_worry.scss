@@ -3,3 +3,42 @@
   height: auto;
   margin: 2rem auto;
 }
+
+.circle-list {
+  left: 15%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  & > * {
+    margin-bottom: 1.5rem;
+    font-size: 1.6rem;
+    color: $dark-grey-2;
+
+    display: block;
+  }
+
+  &__item {
+
+  }
+}
+
+.circle-number {
+  //display: flex;
+  //justify-content: center;
+  //align-items: stretch;
+  text-align: center;
+  display: inline-block;
+
+
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: $light-grey;
+  color: #fff;
+  font-size: 1.8rem;
+  padding: 3px 2px 0 1px;
+  margin-right: 2rem;
+  margin-left: -3rem;
+}

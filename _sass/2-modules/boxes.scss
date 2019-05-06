@@ -5,10 +5,18 @@
   height: 9rem;
   width: 90%;
   margin: 2rem auto;
+  position: relative;
 
   display: flex;
   justify-content: center;
   align-items: center;
+
+  &--large {
+    min-height: 13rem;
+    height: auto;
+    justify-content: center;
+    align-items: stretch;
+  }
 
   &__img {
     background: url("../../assets/img/dropbox.png");
@@ -17,6 +25,22 @@
     min-height: 4rem;
     height: auto;
     margin: 1.5rem;
+
+
+    align-self: center;
+    margin-right: auto;
+    //position: absolute;
+    //left: 0;
+    //bottom: 50%;
+  }
+
+  &__check {
+    width: 3rem;
+    height: auto;
+    position: absolute;
+    //top: 2rem;
+    bottom: 2rem;
+    right: 2rem;
   }
 
   &__text {
@@ -24,7 +48,17 @@
     font-weight: bold;
     font-size: 1.7rem;
     color: #000;
+    text-align: center;
+
+    &--grey {
+      color: $dark-grey;
+      margin: 1rem 0;
+    }
   }
+}
+
+.col {
+  width: 33%;
 }
 
 .text--home {
