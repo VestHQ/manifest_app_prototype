@@ -1,0 +1,37 @@
+<div class="chat welcome">
+    <div class="top">
+        <h3 class="manifest"><a class="backArrow" onclick="goBack()"></a>Manifest</h3>
+        <div class="line--2"></div>
+    </div>
+
+    <h1 class="heading--dark mg-btm-mid">Has something changed? If so, please select any of the following options to clarify:</h1>
+
+    <ul class="list" id="list">
+
+        <li class="radio-row radio-row--2">
+            <label for="selection1" class="item">I would like to link a new IRA account
+                <input id="selection1" type="radio" name="selection1"  class="radio-input" onclick="onCheck(this)" value="{{ site.baseurl }}/link_account">
+                <span class="radio-img"></span>
+            </label>
+        </li>
+
+        <li class="radio-row radio-row--2">
+            <label for="selection2" class="item">I would like to open a new IRA account
+                <input id="selection2" type="radio" name="selection2" class="radio-input" onclick="onCheck(this)" value="{{ site.baseurl }}/ira_provider">
+                <span class="radio-img"></span>
+            </label>
+        </li>
+
+        <li class="radio-row radio-row--2">
+            <label for="selection2" class="item">I changed my mind, please show me my options
+                <input id="selection3" type="radio" name="selection2" class="radio-input" onclick="onCheck(this)" value="{{ site.baseurl }}/ira">
+                <span class="radio-img"></span>
+            </label>
+        </li>
+    </ul>
+
+    <div class="flex btm-fixed btm-fixed--2">
+        <a id="addLink" class="btn-large">Continue</a>
+    </div>
+
+</div>

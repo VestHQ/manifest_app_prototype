@@ -16,6 +16,12 @@
     }
   }
 
+  &--option {
+    color: $grey;
+    font-size: 3rem;
+    margin: 0 auto 1.5rem auto;
+  }
+
   &--dark {
     color: $dark-grey-2;
     width: 90%;
@@ -82,10 +88,15 @@
 
   &--grey {
     font-family: $inter-light;
-    color: lighten($dark-grey, 20%);
+    color: $dark-grey;
     font-weight: 600;
     font-size: 1.5rem;
     text-align: center;
+
+    &--sm {
+      font-size: 1.4rem;
+      padding: .5rem 2rem;
+    }
   }
   &--blue {
     color: $blue;
@@ -178,6 +189,12 @@
   font-size: 1.4rem;
   color: $dark-grey-2;
   padding: 1.5rem;
+
+  &--sm {
+    font-size: 1.4rem !important;
+    margin-bottom: .5rem !important;
+    color: $dark-grey;
+  }
 }
 
 

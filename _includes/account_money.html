@@ -22,10 +22,16 @@
 
     <div class="money">
         <p class="money__co">Fidelity</p>
-        <p class="money__dollar">$6,000.00</p>
+        <p class="money__dollar money__dollar--edit" onclick="goToOtherPage()">$6,000.00</p>
     </div>
     <p class="money__visa">*****8678</p>
 
-    <a href="{{ site.baseurl }}/" class="btn-large btm-fixed">Transfer</a>
+    <a href="{{ site.baseurl }}/prepare_transfer" class="btn-large btm-fixed">Transfer</a>
 
 </div>
+
+<script>
+    function goToOtherPage () {
+        window.location = "{{ site.baseurl }}/account_change"
+    }
+</script>
