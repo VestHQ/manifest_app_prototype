@@ -137,7 +137,7 @@
   width: 2.4rem;
   position: absolute;
   right: -9rem;
-  top: .6rem;
+  top: -.4rem;
 
   &--left {
     left: 2rem;
@@ -160,7 +160,7 @@
 
 [type=radio] {
   right: -9rem;
-  top: .6rem;
+  top: -.4rem;
   position: absolute;
   opacity: 0;
   z-index: 2;
@@ -260,9 +260,6 @@
   background: $grey;
   height: 1px !important;
 }
-
-
-
 
 
 

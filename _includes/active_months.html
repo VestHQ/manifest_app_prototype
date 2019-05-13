@@ -1,28 +1,30 @@
 <div class="chat welcome">
     <div class="top">
         <h3 class="manifest"><a class="backArrow" onclick="goBack()"></a>Manifest</h3>
-        <div class="line line--25"></div>
+        <div class="line--2"></div>
     </div>
 
-    <h1 class="heading heading--top mg-btm-mid">Do you have an <span class="heading--blue">active 401(k)</span> within the next <span class="heading--blue">6 months</span>?</h1>
+    <h1 class="text--black">Do you expect to have an active 401(k) within the next 6 months?</h1>
 
-    <ul class="col" id="list">
-        <li class="radio-row">
-            <label for="selection" class="radio-label"> Yes, I do
-                <input type="radio" name="selection" value="{{ site.baseurl }}/link_other" onclick="onCheck(this)" class="radio-input">
+    <p class="note-text mg-btm-mid"><span class="text--blue">Note: </span>When we say 401(k) we mean any employer sponsored plan (e.g., 401b, 457, TSP)</p>
 
+    <ul class="list" id="list">
+
+        <li class="radio-row radio-row--2">
+            <label for="selection1" class="item">No, I don't
+                <input id="selection1" type="radio" name="selection1"  class="radio-input" onclick="onCheck(this)" value="{{ site.baseurl }}/link_account_info">
                 <span class="radio-img"></span>
             </label>
         </li>
-        <li class="radio-row">
-            <label for="selection" class="radio-label"> No, I don't
-                <input type="radio" name="selection" value="{{ site.baseurl }}/know_yes" onclick="onCheck(this)" class="radio-input">
 
+        <li class="radio-row radio-row--2">
+            <label for="selection2" class="item">Yes, I do
+                <input id="selection2" type="radio" name="selection2" class="radio-input" onclick="onCheck(this)" value="{{ site.baseurl }}/link_account_from_yes">
                 <span class="radio-img"></span>
             </label>
         </li>
     </ul>
 
-    <a id="addLink" class="btn--disabled btm-fixed">Continue</a>
+    <a id="addLink" class="btn-large btm-fixed">Continue</a>
 
 </div>

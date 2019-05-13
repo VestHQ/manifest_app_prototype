@@ -4,7 +4,7 @@
   box-shadow: $box-shadow;
   height: 9rem;
   width: 90%;
-  margin: 2rem auto;
+  margin: 1rem auto 3rem auto;
   position: relative;
 
   display: flex;
@@ -62,10 +62,10 @@
 }
 
 .text--home {
-  font-family: $inter-bold;
+  //font-family: $inter-bold;
   font-weight: bold;
-  font-size: 2rem;
-  color: #000;
+  font-size: 1.8rem;
+  color: $dark-grey-2;
   margin-left: 2rem;
 }
 

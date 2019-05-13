@@ -112,9 +112,11 @@
 }
 
 .u-verify-text {
-  padding: 2rem 6rem !important;
-  font-size: 1.5rem !important;
-  margin-bottom: 5rem;
+  padding: 0 !important;
+  font-size: 1.2rem !important;
+  margin-bottom: 25%;
+  margin-left: 15% !important;
+  color: $dark-grey-2;
 }
 
 .u-text-center-padded {
@@ -141,4 +143,8 @@
 
 .width-90 {
   width: 90% !important;
+}
+
+.mg-auto {
+  margin: 2rem auto !important;
 }

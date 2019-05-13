@@ -23,11 +23,13 @@ html {
 
 body {
   background: #ccc;
-  margin: 15% 33%;
+  //margin: 15% 33%;
   //margin: 2rem;
   overflow-x: hidden;
   font-family: $inter-regular;
   color: $dark-grey;
+
+  @include absCenter;
 }
 
 .compare-col {

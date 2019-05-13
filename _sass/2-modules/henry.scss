@@ -6,6 +6,7 @@
   overflow-x: hidden;
   position: relative;
 
+
   @include respond(isPhone){
     width: 100vw;
     height: 100vh;
