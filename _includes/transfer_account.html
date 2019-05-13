@@ -4,9 +4,7 @@
         <div class="line--2"></div>
     </div>
 
-    <h1 class="text--black">Thank you for linking your TIAA account, have you made a decision on where you want to move this account?</h1>
-
-    <p class="note-text mg-btm-mid"><span class="text--blue">Note: </span>If you need to change the answer in the future, you can. Regardless of your answer to this question Manifest will be able to help you move your account.</p>
+    <h1 class="text--black mg-btm-mid">Have you decided on where you want to transfer this account?</h1>
 
     <ul class="list" id="list">
 
@@ -17,13 +15,16 @@
             </label>
         </li>
 
-        <li class="radio-row radio-row--2">
+        <li class="radio-row radio-row--2 mg-btm-small">
             <label for="selection2" class="item">No, help me decide
                 <input id="selection2" type="radio" name="selection2" class="radio-input" onclick="onCheck(this)" value="{{ site.baseurl }}/dont_worry">
                 <span class="radio-img"></span>
             </label>
         </li>
     </ul>
+
+    <p class="note-text width-80">You can change your answer in the future. <br> Regardless, Manifest will help you move your account.</p>
+
 
     <a id="addLink" class="btn-large btm-fixed">Continue</a>
 

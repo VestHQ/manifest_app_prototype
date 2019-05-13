@@ -107,7 +107,7 @@
   position: relative;
   margin-bottom: 4rem;
   background: #fff;
-  padding: 2rem;
+  padding: 2.5rem;
   box-shadow: $box-shadow-light;
 
   &--2 {
@@ -136,7 +136,7 @@
   height: 2.4rem;
   width: 2.4rem;
   position: absolute;
-  right: -9rem;
+  right: -6rem;
   top: -.4rem;
 
   &--left {
@@ -147,7 +147,7 @@
   &--caution {
     content: url("../../assets/img/caution.png");
     top: -.4rem;
-    right: -8rem;
+    right: -6rem;
 
     &--sm {
       right: 3rem;
@@ -159,7 +159,7 @@
 }
 
 [type=radio] {
-  right: -9rem;
+  right: -6rem;
   top: -.4rem;
   position: absolute;
   opacity: 0;
