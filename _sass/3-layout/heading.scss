@@ -209,7 +209,7 @@
   }
 
   &::before {
-    content: url("../../assets/img/lightbulb.png");
+    content: url("../../assets/img/light@2x.png");
     height: 100%;
     margin-right: 1rem;
     position: absolute;
@@ -230,6 +230,8 @@
 
   &__img {
     margin: 0 1.5rem;
+    width: 2.5rem;
+    height: auto;
   }
 
   &__text {
@@ -244,7 +246,15 @@
 
 
 
+.blue-bg-text {
+  color: $blue;
+  background-color: $light-blue;
+  font-size: 1.8rem;
 
+  margin: .5rem auto;
+  width: 80%;
+  padding: 1rem 1rem 1rem 3rem;
+}
 
 
 

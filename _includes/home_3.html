@@ -9,20 +9,20 @@
     <p class="text--home">Next Up</p>
 
     <div class="box" onclick="goToPartTwo()">
-        <img class="box__img" src="{{ site.baseurl }}/assets/img/dropbox.png">
-        <div class="box__text">Finalize your tranfer paperwork</div>
+        <img class="box__img" src="{{ site.baseurl }}/assets/img/henry.png">
+        <div class="box__text">A specialist will help you understand your finacial preferences.</div>
         <span class="blue-arrow">&nbsp; &nbsp; &rarr;</span>
     </div>
 
     <p class="text--home">Completed</p>
 
-    <div class="box u-mg-btm-1">
+    <div class="box u-mg-btm-1" onclick="goToMenu()">
         <img class="box__img" src="{{ site.baseurl }}/assets/img/tiaa_circle.png">
-        <div class="box__text">We are helping you transfer your University of Chicago retirement account.</div>
+        <div class="box__text">We are transferring your University of Chicago retirement account.</div>
     </div>
     <div class="box">
-        <img class="box__img" src="{{ site.baseurl }}/assets/img/wells_circle.png">
-        <div class="box__text">You have decided to move your University of Chicago account to a Wells Fargo, IRA</div>
+        <img class="box__img" src="{{ site.baseurl }}/assets/img/dropbox.png">
+        <div class="box__text">We linked <span class="blue-text">6</span> destination account options.</div>
     </div>
 
 </div>
@@ -30,5 +30,8 @@
 <script>
     function goToPartTwo() {
         window.location = "{{ site.baseurl }}/transfer_account"
+    }
+    function goToMenu() {
+        window.location = "{{ site.baseurl }}/menu"
     }
 </script>

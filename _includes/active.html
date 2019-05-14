@@ -4,11 +4,15 @@
         <div class="line--2"></div>
     </div>
 
-    <h1 class="text--black">Do you have an active 401(k) with your current employer?</h1>
-
-    <p class="note-text mg-btm-mid"><span class="text--blue">Note: </span>When we say 401(k) we mean any employer sponsored plan (e.g., 401b, 457, TSP)</p>
+    <h1 class="text--black mg-btm-mid">Do you have an active 401(k) with your current employer?</h1>
 
     <ul class="list" id="list">
+        <li class="radio-row radio-row--2">
+            <label for="selection2" class="item">Yes, I do
+                <input id="selection2" type="radio" name="selection2" class="radio-input" onclick="onCheck(this)" value="{{ site.baseurl }}/link_account_info">
+                <span class="radio-img"></span>
+            </label>
+        </li>
 
         <li class="radio-row radio-row--2">
             <label for="selection1" class="item">No, I don't
@@ -16,14 +20,9 @@
                 <span class="radio-img"></span>
             </label>
         </li>
-
-        <li class="radio-row radio-row--2">
-            <label for="selection2" class="item">Yes, I do
-                <input id="selection2" type="radio" name="selection2" class="radio-input" onclick="onCheck(this)" value="{{ site.baseurl }}/link_account_from_yes">
-                <span class="radio-img"></span>
-            </label>
-        </li>
     </ul>
+
+    <p class="note-text mg-btm-mid">You can change your answer in the future. Regardless, Manifest will help you move your account.</p>
 
     <a id="addLink" class="btn-large btm-fixed">Continue</a>
 

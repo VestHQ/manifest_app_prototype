@@ -90,6 +90,7 @@
 }
 
 .mg-top-sm {margin-top: 2rem !important;}
+.mg-top-mid {margin-top: 4rem !important;}
 
 .option-final-text {
   width: 70% !important;
@@ -161,4 +162,10 @@
 }
 .mg-right-sm {
   margin-right: 2.5rem !important;
+}
+
+.no-before {
+  &::before {
+    content: "" !important;
+  }
 }

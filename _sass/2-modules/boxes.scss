@@ -90,31 +90,34 @@
     align-self: stretch;
   }
 }
+.money-card {
+  background-color: #fff;
+  height: 6rem;
+  padding: 1.5rem 1rem;
+  width: 90%;
+  margin: 0 auto 1rem auto;
+  position: relative;
 
+  &--2 {
+    height: auto;
+    padding: .7rem .3rem;
+  }
+}
 .money {
   font-family: $inter-bold;
   color: $dark-grey-2;
   font-size: 1.8rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   width: 80%;
   margin: 1rem auto;
 
   &__co {
-
+    margin-right: 9rem;
   }
 
   &__dollar {
     position: relative;
-
-    &--edit {
-      &::after {
-        content: url("../../assets/img/edit-icon-sm.png");
-        position: absolute;
-        top: -.5rem;
-        margin: 0 .7rem;
-      }
-    }
   }
   &__visa {
     color: $dark-grey;
@@ -123,6 +126,28 @@
     width: 80%;
     margin: 0 auto;
   }
+}
+.icon-right {
+  position: absolute;
+  right: 2.3rem;
+  width: 3.5rem;
+  height: auto;
+
+  &--delete {
+    top: 1.5rem;
+    right: 3rem;
+    width: 1.8rem;
+  }
+}
+
+.sm-line {
+  position: absolute;
+  right: 20%;
+  top: 0;
+  height: 100%;
+  width: 1px;
+  background-color: $light-grey-2;
+  margin: 0 .7rem;
 }
 
 
