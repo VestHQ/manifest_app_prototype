@@ -5,9 +5,9 @@
 }
 
 .placeholder {
-  width: 12rem;
-  height: 12rem;
-  margin: 2rem auto;
+  width: 10rem;
+  height: 10rem;
+  margin: 0 auto;
   border-radius: 50%;
   background: $silver;
 }
@@ -34,7 +34,7 @@
   position: relative;
   left: 5%;
   width: 90%;
-  border-radius: 3px;
+  border-radius: .5rem;
   padding: 1rem 0 1rem 2rem;
 
   .item {

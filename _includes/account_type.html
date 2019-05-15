@@ -1,0 +1,28 @@
+<div class="chat welcome">
+    <div class="top">
+        <h3 class="manifest"><a class="backArrow" onclick="goBack()"></a>Manifest</h3>
+        <div class="line--2"></div>
+    </div>
+
+    <h1 class="text--black mg-btm-mid">What type of account are you opening?</h1>
+
+    <ul class="list" id="list">
+
+        <li class="radio-row radio-row--2">
+            <label for="selection1" class="item">401(k), 403(b), TSP, or 457 retirement account
+                <input id="selection1" type="radio" name="selection1"  class="radio-input" onclick="onCheck(this)" value="{{ site.baseurl }}/home_4">
+                <span class="radio-img top-sm"></span>
+            </label>
+        </li>
+
+        <li class="radio-row radio-row--2 mg-btm-small">
+            <label for="selection2" class="item">IRA account
+                <input id="selection2" type="radio" name="selection2" class="radio-input" onclick="onCheck(this)" value="{{ site.baseurl }}/initiate_transfer">
+                <span class="radio-img top-sm"></span>
+            </label>
+        </li>
+    </ul>
+
+    <a id="addLink" class="btn-large btm-fixed">Continue</a>
+
+</div>

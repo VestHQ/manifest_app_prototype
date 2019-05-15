@@ -107,7 +107,7 @@
   position: relative;
   margin-bottom: 4rem;
   background: #fff;
-  padding: 2.5rem;
+  padding: 2rem;
   box-shadow: $box-shadow-light;
 
   &--2 {
@@ -133,11 +133,11 @@
 
 .radio-img {
   content: url("../../assets/img/silver-check.png");
-  height: 2.4rem;
-  width: 2.4rem;
+  height: 3rem;
+  width: 3rem;
   position: absolute;
   right: -6rem;
-  top: -.4rem;
+  top: .4rem;
 
   &--left {
     left: 2rem;
@@ -160,7 +160,7 @@
 
 [type=radio] {
   right: -6rem;
-  top: -.4rem;
+  top: .4rem;
   position: absolute;
   opacity: 0;
   z-index: 2;

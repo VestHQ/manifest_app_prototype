@@ -32,6 +32,14 @@
     //position: absolute;
     //left: 0;
     //bottom: 50%;
+
+    &--placeholder {
+      background-color: $light-grey-2;
+      width: 6rem;
+      height: 5rem;
+      border-radius: 50%;
+      margin: 1.5rem .5rem 1.5rem 1.5rem;
+    }
   }
 
   &__check {
@@ -44,7 +52,7 @@
 
   &__text {
     font-family: $inter-bold;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     color: #000;
     margin: auto 1.5rem;
 
@@ -75,6 +83,7 @@
   flex-direction: column;
   align-items: flex-start;
   position: relative;
+  margin: 0 auto 1rem auto;
 
   &--tall {
     min-height: 29rem;
@@ -166,6 +175,8 @@
   flex-direction: column;
   justify-content: space-around;
 
+  transition: min-height .3s;
+
   &__header {
     color: $blue;
     font-size: 2.2rem;
@@ -218,4 +229,14 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+}
+
+
+#addInText {
+  display: none;
+  opacity: 0;
+  padding: 2rem;
+  font-size: 1.4rem;
+  color: #000;
+  transition: all .7s;
 }

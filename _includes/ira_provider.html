@@ -6,8 +6,8 @@
 
     <h1 class="heading--dark text-center">Select an <span class="heading--home--blue">IRA provider</span></h1>
 
-    <div class="large-box">
-        <img src="{{ site.baseurl }}/assets/img/wells_circle.png" alt="" class="img-left">
+    <div class="large-box" id="wells">
+        <img src="{{ site.baseurl }}/assets/img/wells_circle.png" alt="" class="img-left" id="circle">
         <div class="flex-row">
             <div class="flex-col mg-right">
                 <p class="box__text box__text--grey">FEES:</p>
@@ -30,10 +30,12 @@
             </div>
         </div>
 
-        <input id="selection1" type="radio" name="selection1" class="large-box__input" onclick="onCheck(this)" value="{{ site.baseurl }}/home_1">
+        <input id="selection1" type="radio" name="selection1" class="large-box__input" onclick="addText()">
         <span class="large-box__check"></span>
+
+        <p id="addInText"></p>
     </div>
-    <div class="large-box">
+    <div class="large-box" id="fidelity">
         <img src="{{ site.baseurl }}/assets/img/fidelity_circle.png" alt="" class="img-left">
         <div class="flex-row">
             <div class="flex-col mg-right">
@@ -57,7 +59,7 @@
             </div>
         </div>
 
-        <input id="selection2" type="radio" name="selection1" class="large-box__input" onclick="onCheck(this)" value="{{ site.baseurl }}/home_2">
+        <input id="selection2" type="radio" name="selection1" class="large-box__input" onclick="onCheck(this)" value="{{ site.baseurl }}/home_1">
         <span class="large-box__check"></span>
     </div>
     <div class="large-box">
@@ -103,6 +105,18 @@
 
 <script>
 
-    //TODO figure out where each link should ACTUALLY link to
+    function addText() {
+        const circle = document.getElementById('circle');
+        circle.style.top = "15%";
+
+        const wells = document.getElementById('wells');
+        wells.style.minHeight = "21rem";
+
+        const addInText = document.getElementById('addInText');
+        addInText.style.display = "flex";
+        addInText.style.opacity = 1;
+
+        addInText.innerText = "Merrill Edge offers high-quality customer service, robust research, and low commissions and fees, all with no account minimum for IRA investors."
+    }
 
 </script>
