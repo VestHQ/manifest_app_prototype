@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include meta.html %}
+</head>
+
+<body>
+<div class="chat welcome" onscroll="updateScroll()">
+    <div class="top">
+        <h3 class="manifest"><a class="backArrow" onclick="goBack()"></a>Manifest</h3>
+        <div class="line--2"></div>
+    </div>
+
+    <h1 class="heading--home">Good Evening, <span class="heading--home--blue">Katie</span></h1>
+
+    <p class="text--home">Next Up</p>
+
+    <div class="box" onclick="goToPartTwo()">
+        <img class="box__img" src="{{ site.baseurl }}/assets/img/dropbox.png">
+        <div class="box__text">Choose your destination provider</div>
+        <span class="blue-arrow">&nbsp; &nbsp; &rarr;</span>
+    </div>
+
+
+    <p class="text--home">Completed</p>
+
+    <div class="box u-mg-btm-0" onclick="goToMenu()">
+        <img class="box__img" src="{{ site.baseurl }}/assets/img/tiaa_circle.png">
+        <div class="box__text">We are transferring your University of Chicago retirement account.</div>
+    </div>
+    <div class="box u-mg-btm-0">
+        <img class="box__img" src="{{ site.baseurl }}/assets/img/dropbox.png">
+        <div class="box__text">You linked <span class="blue-text">6</span> destination account options.</div>
+    </div>
+
+    <div class="box u-mg-btm-0" onclick="goToPartTwo()">
+        <img class="box__img" src="{{ site.baseurl }}/assets/img/henry.png">
+        <div class="box__text">You spoke to Henry and he has collected your preferences</div>
+    </div>
+
+    <div class="box" onclick="goToPartTwo()">
+        <div class="box__img--placeholder"></div>
+        <div class="box__text">You decided to move your account into an IRA</div>
+    </div>
+
+</div>
+
+<script>
+    function goToPartTwo() {
+        window.location = "{{ site.baseurl }}/transfer_account"
+    }
+    function goToMenu() {
+        window.location = "{{ site.baseurl }}/menu"
+    }
+</script>
+
+{% include script_toggle_link.html %}
+
+</body>
+</html>

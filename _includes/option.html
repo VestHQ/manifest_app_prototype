@@ -1,0 +1,44 @@
+<div class="chat welcome">
+    <div class="top">
+        <h3 class="manifest"><a class="backArrow" onclick="goBack()"></a>Manifest</h3>
+        <div class="line--2"></div>
+    </div>
+
+    <h1 class="heading--dark padding-sm no-mg-btm">We are dedicated to growing and investing your retirement savings. For your account type, we suggest:</h1>
+
+    <p class="note-text mg-top-btm-sm left-5">We have no conflicts of interest, your employer has already paid for this benefit.</p>
+
+    <ul class="list" id="list">
+
+        <li class="radio-row radio-row--2">
+            <label for="selection1" class="item ribbon">Best Option for you: <span class="blue-text">IRA</span>
+                <br>
+                <a class="underline">Show More</a>
+                <input id="selection1" type="radio" name="selection1"  class="radio-input" onclick="onCheck(this)" value="{{ site.baseurl }}/close_loans">
+                <span class="radio-img"></span>
+            </label>
+        </li>
+
+        <li class="radio-row radio-row--2">
+            <label for="selection2" class="item">Option 2: <span class="blue-text">401(k)</span>
+                <br>
+                <a class="underline">Show More</a>
+                <input id="selection2" type="radio" name="selection2" class="radio-input" onclick="onCheck(this)" value="{{ site.baseurl }}/home_1">
+                <span class="radio-img"></span>
+            </label>
+        </li>
+
+        <li class="radio-row radio-row--2">
+            <label for="selection2" class="item">Option 3: <span class="blue-text">Managed IRA</span>
+                <br>
+                <a class="underline">Show More</a>
+                <input id="selection3" type="radio" name="selection2" class="radio-input" onclick="onCheck(this)" value="{{ site.baseurl }}/home_1">
+                <span class="radio-img"></span>
+            </label>
+        </li>
+    </ul>
+
+
+    <a class="btn btm" href="{{ site.baseurl }}/option_2">Select</a>
+
+</div>

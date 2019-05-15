@@ -6,8 +6,9 @@
 <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js" integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E=" crossorigin="anonymous">
 </script>
 
+
 <script>
-    const debugAccelerator = 1; // switch to 1
+    const debugAccelerator = 10; // switch to 1
     const chatMessages = [
         {
             type: "text",
@@ -18,13 +19,13 @@
         {
             type: "text",
             align: "left",
-            msg: "Nice work on choosing to consolidate your retirement accounts. Choosing the right account can be hard, but I'm here to help!",
+            msg: "Nice work deciding to consolidate your retirement accounts. Choosing the right account can be hard. Luckily, I’m here to help!",
             delay: 1200,
         },
         {
             type: "text",
             align: "left",
-            msg: "Do you have any open loans in your TIAA 401(k)?",
+            msg: "Tell me, do you have at least 6 months of personal savings outside of your retirement accounts?",
             delay: 1500,
         },
         {
@@ -35,18 +36,45 @@
         {
             type: "text",
             align: "left",
-            msg: "Do you have at least 6 months of personal savings?"
+            msg: "Some retirement plans allow you to take out loans. How important is this feature to you?"
         },
         {
             type: "input",
             align: "left",
-            input: {type: "buttons", buttons: ["Yes", "No"]},
+            input: {type: "buttons", buttons: ["Very Important", "Somewhat Important"]},
             delay: 1900
         },
         {
             type: "text",
             align: "left",
-            msg: "Would you need the option to take out a loan from your retirement savings in the future?",
+            msg: "There are 2 types of investors:\n" +
+                "\n" +
+                "Active investors prefer to frequently monitor their investment choices, adjust allocations, and follow the market.\n" +
+                "\n" +
+                "Passive investors like their investments to be managed for them.",
+            delay: 1800,
+        },
+        {
+            type: "text",
+            align: "left",
+            msg: "Which one best describes you?"
+        },
+        {
+            type: "input",
+            align: "left",
+            input: {type: "buttons", buttons: ["Active", "Passive"]},
+            delay: 1900
+        },
+        {
+            type: "text",
+            align: "left",
+            msg: "Awesome! I have 2 follow-up questions based on your investment style.",
+            delay: 1800,
+        },
+        {
+            type: "text",
+            align: "left",
+            msg: "Do you like to invest in individual equities (e.g., AAPL GOOG, TSLA)?",
             delay: 1800,
         },
         {
@@ -58,62 +86,31 @@
         {
             type: "text",
             align: "left",
-            msg: "Would you like to manage your retirement accounts actively or passively?",
+            msg: "How often did you trade in the last 6 months?",
             delay: 1800,
         },
         {
             type: "input",
             align: "left",
-            input: {type: "buttons", buttons: ["Actively", "Passively"]},
+            input: {type: "buttons", buttons: ["Daily", "Weekly", "Rarely", "Never"]},
             delay: 1900
         },
         {
             type: "text",
             align: "left",
-            msg: "Would you like to invest in individual equities?",
+            msg: "You're almost done!",
             delay: 1800,
-        },
-        {
-            type: "input",
-            align: "left",
-            input: {type: "buttons", buttons: ["Yes", "No"]},
-            delay: 1900
         },
         {
             type: "text",
             align: "left",
-            msg: "How many trades have you done in the last 6 months?",
+            msg: "I noticed that not all of your linked accounts have been categorized. Many providers without modern technologies don’t supply us with this information. Help us identify these accounts accurately.",
             delay: 1800,
         },
         {
             type: "input",
             align: "left",
-            input: {type: "buttons", buttons: ["None", "Less than 10", "1/Week", "1/Day"]},
-            delay: 1900
-        },
-        {
-            type: "text",
-            align: "left",
-            msg: "How important is it for you to have a single account to manage in your retirement?",
-            delay: 1800,
-        },
-        {
-            type: "input",
-            align: "left",
-            input: {type: "buttons", buttons: ["1", "2", "3", "4", "5"]},
-            id: "/5",
-            delay: 1900
-        },
-        {
-            type: "text",
-            align: "left",
-            msg: "I have a suggestion for your destination account. Would you like to see it?",
-            delay: 1800,
-        },
-        {
-            type: "input",
-            align: "left",
-            input: {type: "buttons", buttons: ["Show Me"]},
+            input: {type: "buttons", buttons: ["Continue"]},
             delay: 1900
         }
     ];
@@ -199,7 +196,7 @@
 
     function processCurrentMessage() {
         if (currentMessage >= chatMessages.length) {
-            window.location = "{{ site.baseurl }}/ira"; //exit to next page on last msg
+            window.location = "{{ site.baseurl }}/post_henry"; //exit to next page on last msg
             return;
         }
 

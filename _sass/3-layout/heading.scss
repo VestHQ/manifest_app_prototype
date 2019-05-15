@@ -217,7 +217,17 @@
   }
 }
 
+.underline {
+  font-family: $inter-bold;
+  font-size: 1.4rem;
+  text-decoration: underline;
+  color: $grey;
 
+  &:hover,
+  &:focus {
+    color: $blue;
+  }
+}
 
 .blue-heading {
   display: flex;
@@ -241,6 +251,27 @@
   }
 }
 
+.green-heading {
+  padding: 1.3rem 1.8rem;
+  width: 85%;
+  margin: 1.5rem auto;
+  background-color: $green;
+
+  &__text {
+    font-family: $inter-light;
+    color: #fff;
+    font-size: 2rem;
+  }
+}
+
+.blue-heading-light {
+  @extend .green-heading;
+  background-color: $charles-blue;
+
+  &__text {
+    @extend .green-heading__text;
+  }
+}
 
 
 

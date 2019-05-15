@@ -20,6 +20,7 @@
 }
 .u-mg-btm-6 { margin-bottom: 6rem !important;}
 .u-mg-btm-1 { margin-bottom: 1rem !important;}
+.u-mg-btm-0 { margin-bottom: 0 !important;}
 
 .u-font-mid { font-size: 2.2rem !important;}
 
@@ -175,4 +176,12 @@
   &::before {
     content: "" !important;
   }
+}
+
+.line-height {
+  line-height: 1.7;
+}
+
+.padding-extra {
+  padding: 1rem 0;
 }

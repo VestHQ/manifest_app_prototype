@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include meta.html %}
+</head>
+
+<body>
+
+<div class="chat" onscroll="">
+    <div class="top">
+        <h3 class="manifest"><a class="backArrow" onclick="goBack()"></a>Manifest</h3>
+        <div class="line--2"></div>
+    </div>
+
+    <header class="header">
+        <h1 class="heading heading--blue mg-top-btm-sm">Congratulations!</h1>
+        <div class="placeholder"></div>
+    </header>
+
+    <p class="text">You have completed the second step. Just one more to go until you can finalize your destination.</p>
+
+    <ul class="henry-list">
+        <li class="item">
+            <div class="circle-number circle-number--blue">1</div>
+            Organize your retirement account options
+        </li>
+        <li class="item">
+            <div class="circle-number circle-number--blue">2</div>
+            Understand your financial preferences
+        </li>
+        <li class="item">
+            <div class="circle-number">3</div>
+            Identify the best destination for you
+        </li>
+    </ul>
+
+    <a class="btn btm-fixed" href="{{ site.baseurl }}/henry">Continue</a>
+</div>
+
+{% include script_toggle_link.html %}
+
+</body>
+</html>

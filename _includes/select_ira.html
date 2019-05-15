@@ -1,0 +1,48 @@
+<div class="chat welcome">
+    <div class="top">
+        <h3 class="manifest"><a class="backArrow" onclick="goBack()"></a>Manifest</h3>
+        <div class="line--2"></div>
+    </div>
+
+    <h1 class="heading--top text-center">Select an <span class="highlight--blue">IRA </span>provider</h1>
+
+    <ul class="list" id="list">
+
+        <li class="radio-row radio-row--2">
+            <label for="selection1" class="item line-height">Fidelity
+                <br>
+                {Insert body text here}
+                <input id="selection1" type="radio" name="selection1"  class="radio-input" onclick="onCheck(this)" value="{{ site.baseurl }}/close_loans">
+                <span class="radio-img"></span>
+            </label>
+        </li>
+
+        <li class="radio-row radio-row--2">
+            <label for="selection2" class="item line-height">Wells Fargo
+                <br>
+                {Insert body text here}
+                <input id="selection2" type="radio" name="selection2" class="radio-input" onclick="onCheck(this)" value="{{ site.baseurl }}/home_1">
+                <span class="radio-img"></span>
+            </label>
+        </li>
+
+        <li class="radio-row radio-row--2">
+            <label for="selection2" class="item line-height">Charles Schwab
+                <br>
+                {Insert body text here}
+                <input id="selection3" type="radio" name="selection2" class="radio-input" onclick="onCheck(this)" value="{{ site.baseurl }}/home_1">
+                <span class="radio-img"></span>
+            </label>
+        </li>
+
+        <li class="radio-row radio-row--2">
+            <label for="selection2" class="item padding-extra">Open New Account
+                <input id="selection4" type="radio" name="selection2" class="radio-input" onclick="onCheck(this)" value="{{ site.baseurl }}/home_1">
+                <span class="radio-img"></span>
+            </label>
+        </li>
+    </ul>
+
+    <a id="addLink" class="btn-large btm-fixed">Continue</a>
+
+</div>
