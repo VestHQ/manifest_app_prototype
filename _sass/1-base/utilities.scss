@@ -1,6 +1,7 @@
 .u-mg-mid { margin: 3rem auto 6rem auto !important;}
 
 .u-mg-sm { margin: 3rem auto !important;}
+.u-mg-xs { margin: 1.5rem auto !important;}
 .u-mg-top-sm { margin: 2rem !important;}
 .u-mg-xsm { margin: 2rem 1rem !important;}
 .u-bottom {
@@ -10,6 +11,7 @@
   transform: translate(50%, -50%);
 }
 .u-mg-left-sm { margin-left: 1.7rem !important;}
+.u-mg-left-mid { margin-left: 4rem !important;}
 
 .mg-top-btm-sm {margin: 3rem auto 2rem auto !important;}
 
@@ -184,4 +186,12 @@
 
 .padding-extra {
   padding: 1rem 0;
+}
+
+.check-before {
+  &::before {
+    content: url("../../assets/img/Large-Check.png");
+    position: absolute;
+    left: 2rem;
+  }
 }
