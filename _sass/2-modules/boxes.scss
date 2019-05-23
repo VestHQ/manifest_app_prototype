@@ -78,7 +78,7 @@
 .long-box {
   @extend .box;
   height: auto;
-  padding: 2rem 0;
+  //padding: 2rem 0;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -87,7 +87,7 @@
 
   &--tall {
     min-height: 29rem;
-    justify-content: flex-start;
+    @include absCenter;
   }
 
   p {

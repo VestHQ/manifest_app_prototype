@@ -13,11 +13,33 @@
         <li class="radio-row radio-row--2">
             <label for="selection1" class="item ribbon">Best Option for you: <span class="blue-text">IRA</span>
                 <br>
-                <a class="underline">Show More</a>
+                <a class="underline" id="open-modal">Show More</a>
                 <input id="selection1" type="radio" name="selection1"  class="radio-input" onclick="onCheck(this)" value="{{ site.baseurl }}/close_loans">
                 <span class="radio-img"></span>
             </label>
+
+            <div class="modal" id="modal">
+                <div class="long-box long-box--tall">
+                    <button class="x-modal" aria-label="close"></button>
+                    <h2 class="heading heading--blue text-center u-mg-xs">IRA</h2>
+
+                    <p class="text--grey--sm check-before u-mg-left-mid">
+                        Opportunity to actively manage your investments
+                    </p>
+                    <p class="text--grey--sm check-before u-mg-left-mid">
+                        Greater flexibility to invest in various kinds of assets
+                    </p>
+                    <p class="text--grey--sm check-before u-mg-left-mid">
+                        High potential to maximize returns
+                    </p>
+                </div>
+            </div>
+
         </li>
+
+
+
+
 
         <li class="radio-row radio-row--2">
             <label for="selection2" class="item">Option 2: <span class="blue-text">401(k)</span>

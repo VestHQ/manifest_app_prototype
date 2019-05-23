@@ -1,0 +1,27 @@
+<script>
+
+    let btn = document.getElementById('open-modal');
+    let modal = document.getElementById('modal');
+    let sendBtn = document.getElementById('sendBtn');
+    let x = document.querySelector('.x-modal');
+
+    btn.onclick = function () {
+        modal.style.display = "block";
+        modal.style.visibility = "visible";
+    };
+
+    // close modal with escape btn
+    document.addEventListener("keydown", function(e) {
+        if (e.which === 27) {
+            modal.style.display = "none";
+        }
+    });
+
+    // close modal on outside click, clicking send or x
+    window.onclick = function(event) {
+        if (event.target === modal || event.target === sendBtn || event.target === x) {
+            modal.style.display = "none";
+        }
+    };
+
+</script>
