@@ -30,6 +30,12 @@
 
   &--blue {
     color: $blue;
+
+    &--2 {
+      font-family: $inter-light;
+      font-weight: 100;
+      font-size: 2.6rem;
+    }
   }
   &--secondary {
     width: 80%;
@@ -170,7 +176,6 @@
 
 .blue-text {
   font-family: $inter-bold;
-  font-weight: 900;
   color: $blue;
   font-size: 1.4rem;
   margin-bottom: 3rem;

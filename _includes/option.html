@@ -20,8 +20,8 @@
 
             <div class="modal" id="modal">
                 <div class="long-box long-box--tall">
-                    <button class="x-modal" aria-label="close"></button>
-                    <h2 class="heading heading--blue text-center u-mg-xs">IRA</h2>
+                    <a class="x-modal" id="x-modal" aria-label="close"></a>
+                    <h2 class="heading heading--blue heading--blue--2 text-center u-mg-xs">IRA</h2>
 
                     <p class="text--grey--sm check-before u-mg-left-mid">
                         Opportunity to actively manage your investments
@@ -34,20 +34,37 @@
                     </p>
                 </div>
             </div>
-
         </li>
-
-
-
-
 
         <li class="radio-row radio-row--2">
             <label for="selection2" class="item">Option 2: <span class="blue-text">401(k)</span>
                 <br>
-                <a class="underline">Show More</a>
+                <a class="underline" id="open-modal2">Show More</a>
                 <input id="selection2" type="radio" name="selection2" class="radio-input" onclick="onCheck(this)" value="{{ site.baseurl }}/home_1">
                 <span class="radio-img"></span>
             </label>
+
+
+            <div class="modal" id="modal2">
+                <div class="long-box long-box--tall">
+                    <button class="x-modal" id="x-modal2" aria-label="close"></button>
+                    <h2 class="heading heading--blue heading--blue--2 text-center u-mg-xs">401(k)</h2>
+
+                    <p class="text--grey--sm check-before u-mg-left-mid">
+                        Unique protections such as having
+                        a fiduciary tied to your account
+                        and bankruptcy protection
+                    </p>
+                    <p class="text--grey--sm check-before u-mg-left-mid">
+                        Most 401(k) plans offer loans,
+                        which could come in handy during
+                        an emergency
+                    </p>
+                    <p class="text--grey--sm check-before u-mg-left-mid">
+                        Save automatically every time you get paid
+                    </p>
+                </div>
+            </div>
         </li>
 
         <li class="radio-row radio-row--2">

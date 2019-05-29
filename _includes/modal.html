@@ -1,11 +1,11 @@
 <script>
 
-    let btn = document.getElementById('open-modal');
+    let open = document.getElementById('open-modal');
     let modal = document.getElementById('modal');
-    let sendBtn = document.getElementById('sendBtn');
-    let x = document.querySelector('.x-modal');
+    let x = document.getElementById('x-modal');
+    console.log(x)
 
-    btn.onclick = function () {
+    open.onclick = function () {
         modal.style.display = "block";
         modal.style.visibility = "visible";
     };
@@ -19,9 +19,33 @@
 
     // close modal on outside click, clicking send or x
     window.onclick = function(event) {
-        if (event.target === modal || event.target === sendBtn || event.target === x) {
+        if (event.target === modal || event.target === x) {
             modal.style.display = "none";
         }
     };
+
+
+    //2/////////
+    let open2 = document.getElementById('open-modal2');
+    let modal2 = document.getElementById('modal2');
+    let x2 = document.getElementById('x-modal2');
+
+    open2.onclick = function () {
+        modal2.style.display = "block";
+        modal2.style.visibility = "visible";
+    };
+
+    document.addEventListener("keydown", function(e) {
+        if (e.which === 27) {
+            modal2.style.display = "none";
+        }
+    });
+
+    window.onclick = function(event) {
+        if (event.target === modal2 || event.target === x2) {
+            modal2.style.display = "none";
+        }
+    };
+
 
 </script>
